@@ -65,6 +65,15 @@ OS name: "linux", version: "4.9.13-moby", arch: "amd64", family: "unix"
 
 で`Hello! taro`って出る。
 
+```
+$ mvn package
+$ mvn tomcat7:run
+$ curl -H "Content-Type: application/json" localhost:8080/hello/call
+$ curl -H "Content-Type: application/json" localhost:8080/helloapi/hello/calc?x=1\&y=2
+$ java -jar target/command_helloapi.jar
+$ java -jar target/command_helloapi.jar test call name
+$ java -jar target/command_helloapi.jar test sum 1 2
+```
 
 
 

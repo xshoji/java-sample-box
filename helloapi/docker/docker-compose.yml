@@ -2,34 +2,12 @@ version: '2'
 
 services:
 
-    # javaコンテナ
-    webapp:
-        image: ${REPOSITORY_APP_JAVA}
-        container_name: ${CONTAINER_APP_JAVA}
-        build:
-            context: ./docker_files/java
-            dockerfile: Dockerfile
-        ports:
-            - "${HOST_PORT_SSH}:22"
-            - "${HOST_PORT_HTTP_WEB}:8080"
-        volumes:
-            - ${JAVA_APP_DIR}:/app
-        networks:
-            - my_network
-
     # postgresqlコンテナ
     db:
-        image: ${REPOSITORY_POSTGRESQL}
-        container_name: ${CONTAINER_POSTGRESQL}
+        image: postgres:9.4
+        container_name: helloapi_postgresql
         environment:
             POSTGRES_USER: postgres
             POSTGRES_PASSWORD: postgres
         ports:
-            - "${HOST_PORT_DB}:5432"
-        networks:
-            - my_network
-
-# network
-# dockerのlinkオプションがレガシーなので、コンテナ間で名前解決できるようにネットワークを用意する(http://qiita.com/tamanobi/items/8b8dd64ae1f959f9ff9f) の記事中で行った操作を`docker-compose`コマンドで実行できるように`docker-compose.yml`としてまとめた。 https://gist.github.com/tamanobi/cfef34197d531945872173fcb0906cf5
-networks:
-  my_network:
+            - "15432:5432"

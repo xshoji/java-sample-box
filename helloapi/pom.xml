@@ -13,7 +13,7 @@
   <!-- ■　main/resourcesの各種xmlファイルに注入するプロパティ値 -->
   <properties>
     <logback.log.dir>/tmp/logs</logback.log.dir>
-    <database.jcdb_url>jdbc:postgresql://db:5432/postgres</database.jcdb_url>
+    <database.jcdb_url>jdbc:postgresql://db:15432/postgres</database.jcdb_url>
     <database.user>postgres</database.user>
     <database.pass>postgres</database.pass>
   </properties>
