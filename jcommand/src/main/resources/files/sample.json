@@ -1,0 +1,24 @@
+{
+  "persons": {
+    "id1": {
+      "name": "aaa",
+      "age": 10,
+      "others": []
+    },
+    "id2": {
+      "name": "bbb",
+      "age": 11,
+      "others": [
+        "aaa"
+      ]
+    },
+    "id3": {
+      "name": "ccc",
+      "age": 10,
+      "others": [
+        "aaa",
+        "bbb"
+      ]
+    }
+  }
+}
