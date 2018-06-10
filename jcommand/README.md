@@ -1,4 +1,4 @@
-# SimpleConsole
+# jcommand
 
 ## Installation and Run sample command
 
