@@ -1,5 +1,7 @@
 package jp.gr.javaconf.org.nsgeorge.springbootmultimodule.domain.entity;//package com.example.demo.common.entity;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jp.gr.javaconf.org.nsgeorge.springbootmultimodule.domain.repository.CommentRepository;
 import org.json.JSONObject;
 import org.junit.After;
@@ -28,6 +30,8 @@ public class CommentTest {
     @Autowired
     private CommentRepository rep;
 
+    private ObjectMapper mapper = new ObjectMapper();
+
     @Before
     public void setUp() {
         System.out.println("setUp");
@@ -48,8 +52,6 @@ public class CommentTest {
         System.out.println("testNew - start");
 
         Comment entity = new Comment();
-        entity.setRecordId(1L);
-        entity.setUserId(1L);
         Map<String, Object> content = new HashMap<>();
         Map<String, String> content2 = new HashMap<>();
         content2.put("testKey1", "testValue1");
@@ -57,8 +59,11 @@ public class CommentTest {
         content.put("testKey2", "testValue2");
         content.put("testKey3", "testValue3");
         content.put("testKey4", content2);
-        JSONObject json = new JSONObject(content);
-        entity.setContentJson(json.toString());
+        try {
+            entity.setMessage(mapper.writeValueAsString(content));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         rep.save(entity);
         rep.flush();
         List<Comment> entities = rep.findAll();
