@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+
+    # postgresqlコンテナ
+    db:
+        image: postgres:9.4
+        container_name: helloapi_postgresql
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+        ports:
+            - "15432:5432"
