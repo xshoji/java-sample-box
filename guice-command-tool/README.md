@@ -1,5 +1,3 @@
-# jcommand
-
 # guice-command-tool
 
 コマンドラインツールをビルドする場合のサンプルプロジェクト
