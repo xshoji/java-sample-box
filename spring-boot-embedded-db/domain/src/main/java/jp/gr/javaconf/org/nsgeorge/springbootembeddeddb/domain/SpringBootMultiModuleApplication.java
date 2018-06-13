@@ -1,4 +1,4 @@
-package jp.gr.javaconf.org.nsgeorge.springbootmultimodule.domain;
+package jp.gr.javaconf.org.nsgeorge.springbootembeddeddb.domain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

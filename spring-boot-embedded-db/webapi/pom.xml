@@ -5,20 +5,20 @@
 
 	<parent>
 		<groupId>jp.gr.javaconf.org.nsgeorge</groupId>
-		<artifactId>spring-boot-multi-module</artifactId>
+		<artifactId>spring-boot-embedded-db</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>spring-boot-multi-module-webapi</artifactId>
+	<artifactId>spring-boot-embedded-db-webapi</artifactId>
 	<packaging>jar</packaging>
-	<name>spring-boot-multi-module-webapi</name>
+	<name>spring-boot-embedded-db-webapi</name>
 	<description>Demo project for Spring Boot [webapi] </description>
 
 
 	<dependencies>
 		<dependency>
 			<groupId>jp.gr.javaconf.org.nsgeorge</groupId>
-			<artifactId>spring-boot-multi-module-domain</artifactId>
+			<artifactId>spring-boot-embedded-db-domain</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

@@ -5,13 +5,13 @@
 
 	<parent>
 		<groupId>jp.gr.javaconf.org.nsgeorge</groupId>
-		<artifactId>spring-boot-multi-module</artifactId>
+		<artifactId>spring-boot-embedded-db</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>spring-boot-multi-module-domain</artifactId>
+	<artifactId>spring-boot-embedded-db-domain</artifactId>
 	<packaging>jar</packaging>
-	<name>spring-boot-multi-module-domain</name>
+	<name>spring-boot-embedded-db-domain</name>
 	<description>Demo project for Spring Boot [domain] </description>
 
 </project>

@@ -1,9 +1,8 @@
-package jp.gr.javaconf.org.nsgeorge.springbootmultimodule.domain.entity;//package com.example.demo.common.entity;
+package jp.gr.javaconf.org.nsgeorge.springbootembeddeddb.domain.entity;//package com.example.demo.common.entity;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jp.gr.javaconf.org.nsgeorge.springbootmultimodule.domain.repository.CommentRepository;
-import org.json.JSONObject;
+import jp.gr.javaconf.org.nsgeorge.springbootembeddeddb.domain.repository.CommentRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

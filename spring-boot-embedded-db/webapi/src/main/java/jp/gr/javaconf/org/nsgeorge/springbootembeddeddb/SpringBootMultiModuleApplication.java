@@ -1,9 +1,9 @@
-package jp.gr.javaconf.org.nsgeorge.springbootmultimodule;
+package jp.gr.javaconf.org.nsgeorge.springbootembeddeddb;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jp.gr.javaconf.org.nsgeorge.springbootmultimodule.domain.entity.Comment;
-import jp.gr.javaconf.org.nsgeorge.springbootmultimodule.domain.repository.CommentRepository;
+import jp.gr.javaconf.org.nsgeorge.springbootembeddeddb.domain.entity.Comment;
+import jp.gr.javaconf.org.nsgeorge.springbootembeddeddb.domain.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>jp.gr.javaconf.org.nsgeorge</groupId>
-	<artifactId>spring-boot-multi-module</artifactId>
+	<artifactId>spring-boot-embedded-db</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>spring-boot-multi-module</name>
+	<name>spring-boot-embedded-db</name>
 	<description>Sample project for Multi module of Spring Boot</description>
 
     <parent>
