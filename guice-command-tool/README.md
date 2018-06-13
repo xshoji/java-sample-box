@@ -1,5 +1,9 @@
 # jcommand
 
+# guice-command-tool
+
+コマンドラインツールをビルドする場合のサンプルプロジェクト
+
 ## Installation and Run sample command
 
 ## History
