@@ -16,6 +16,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper class="com.georgen.helloapi.repository.mapper.PersonMapper"/>
+        <mapper class="jp.gr.javaconf.org.nsgeorge.helloapi.repository.mapper.PersonMapper"/>
     </mappers>
 </configuration>

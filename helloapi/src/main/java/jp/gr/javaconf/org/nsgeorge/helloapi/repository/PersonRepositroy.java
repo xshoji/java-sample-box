@@ -1,7 +1,7 @@
-package com.georgen.helloapi.repository;
+package jp.gr.javaconf.org.nsgeorge.helloapi.repository;
 
-import com.georgen.helloapi.entity.Person;
-import com.georgen.helloapi.repository.mapper.PersonMapper;
+import jp.gr.javaconf.org.nsgeorge.helloapi.entity.Person;
+import jp.gr.javaconf.org.nsgeorge.helloapi.repository.mapper.PersonMapper;
 import com.google.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

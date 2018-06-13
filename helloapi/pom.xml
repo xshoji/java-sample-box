@@ -3,7 +3,7 @@
 
   <!-- ■　プロジェクト設定 -->
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.georgen.helloapi</groupId>
+  <groupId>jp.gr.javaconf.org.nsgeorge</groupId>
   <artifactId>helloapi</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -93,11 +93,11 @@
           <descriptors><!-- 独自定義ファイルの指定 -->
             <descriptor>src/main/assembly/executable-jar.xml</descriptor>
           </descriptors>
-          <finalName>command_helloapi</finalName>
+          <finalName>helloapi-cli</finalName>
           <appendAssemblyId>false</appendAssemblyId>
           <archive>
             <manifest>
-              <mainClass>com.georgen.helloapi.command.HelloapiCommand</mainClass>
+              <mainClass>jp.gr.javaconf.org.nsgeorge.helloapi.command.HelloapiCommand</mainClass>
             </manifest>
           </archive>
         </configuration>

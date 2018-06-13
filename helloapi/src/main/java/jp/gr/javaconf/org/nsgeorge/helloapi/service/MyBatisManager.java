@@ -1,7 +1,6 @@
-package com.georgen.helloapi.service;
+package jp.gr.javaconf.org.nsgeorge.helloapi.service;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.Reader;
 
 import org.apache.ibatis.io.Resources;

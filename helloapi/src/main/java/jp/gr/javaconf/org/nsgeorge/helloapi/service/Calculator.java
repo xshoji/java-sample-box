@@ -1,4 +1,4 @@
-package com.georgen.helloapi.service;
+package jp.gr.javaconf.org.nsgeorge.helloapi.service;
 
 
 public class Calculator

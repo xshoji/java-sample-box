@@ -66,13 +66,15 @@ OS name: "linux", version: "4.9.13-moby", arch: "amd64", family: "unix"
 で`Hello! taro`って出る。
 
 ```
+$ cd docker
+$ docker-compose up -d
 $ mvn package
 $ mvn tomcat7:run
-$ curl -H "Content-Type: application/json" localhost:8080/hello/call
-$ curl -H "Content-Type: application/json" localhost:8080/helloapi/hello/calc?x=1\&y=2
-$ java -jar target/command_helloapi.jar
-$ java -jar target/command_helloapi.jar test call name
-$ java -jar target/command_helloapi.jar test sum 1 2
+$ curl -H "Content-Type: application/json" localhost:8080/helloapi/hello/call?name=taro; echo
+$ curl -H "Content-Type: application/json" localhost:8080/helloapi/hello/calc?x=1\&y=2; echo
+$ java -jar target/helloapi-cli.jar
+$ java -jar target/helloapi-cli.jar test call name
+$ java -jar target/helloapi-cli.jar test sum 1 2
 ```
 
 
@@ -360,8 +362,8 @@ API動いていない・・・。
 
 ```
 [root@3f7457635137 app]# mvn package
-[root@3f7457635137 app]# java -cp target/helloapi.war com.georgen.helloapi.command.HelloapiCommand test
-Error: Could not find or load main class com.georgen.helloapi.command.HelloapiCommand
+[root@3f7457635137 app]# java -cp target/helloapi.war jp.gr.javaconf.org.nsgeorge.helloapi.command.HelloapiCommand test
+Error: Could not find or load main class jp.gr.javaconf.org.nsgeorge.helloapi.command.HelloapiCommand
 [root@3f7457635137 app]#
 ```
 
@@ -441,7 +443,7 @@ Error: Could not find or load main class com.georgen.helloapi.command.HelloapiCo
           <appendAssemblyId>false</appendAssemblyId>
           <archive>
             <manifest>
-              <mainClass>com.georgen.helloapi.command.HelloapiCommand</mainClass>
+              <mainClass>jp.gr.javaconf.org.nsgeorge.helloapi.command.HelloapiCommand</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -464,9 +466,9 @@ Error: Could not find or load main class com.georgen.helloapi.command.HelloapiCo
 [INFO] Finished at: 2017-05-07T07:53:04Z
 [INFO] Final Memory: 16M/189M
 [INFO] ------------------------------------------------------------------------
-[root@3f7457635137 app]# java -jar target/command_helloapi.jar com.georgen.helloapi.command.HelloapiCommand call tom!
+[root@3f7457635137 app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.helloapi.command.HelloapiCommand call tom!
 Hello! tom!
-[root@3f7457635137 app]# java -jar target/command_helloapi.jar com.georgen.helloapi.command.HelloapiCommand sum 1 2
+[root@3f7457635137 app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.helloapi.command.HelloapiCommand sum 1 2
 x:1 + y:2 = sum:3
 [root@3f7457635137 app]#
 ```
@@ -498,9 +500,9 @@ x:1 + y:2 = sum:3
 [INFO] Finished at: 2017-05-07T08:12:49Z
 [INFO] Final Memory: 21M/196M
 [INFO] ------------------------------------------------------------------------
-[root@3f7457635137 app]# java -jar target/command_helloapi.jar com.georgen.helloapi.command.HelloapiCommand call hideo
+[root@3f7457635137 app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.helloapi.command.HelloapiCommand call hideo
 Hello! hideo
-[root@3f7457635137 app]# java -jar target/command_helloapi.jar com.georgen.helloapi.command.HelloapiCommand sum 1 2
+[root@3f7457635137 app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.helloapi.command.HelloapiCommand sum 1 2
 x:1 + y:2 = sum:3
 [root@3f7457635137 app]# mvn tomcat7:run
 [INFO] Scanning for projects...
@@ -692,7 +694,7 @@ pom.xmlに以下を追加
 ```
 
  - `resources/mybatis-config.xml`を追加
-     - `resources/mybatis-mapper.xml`は使わず、直接`<mapper class="com.georgen.helloapi.repository.mapper.PersonRepository"/>`を指定する
+     - `resources/mybatis-mapper.xml`は使わず、直接`<mapper class="jp.gr.javaconf.org.nsgeorge.helloapi.repository.mapper.PersonRepository"/>`を指定する
  - `src/main/java/com/georgen/helloapi/entity/Person.java`を追加
      - [6.2. データベースアクセス（MyBatis3編） — TERASOLUNA Server Framework for Java (5.x) Development Guideline 5.3.0.RELEASE documentation](http://terasolunaorg.github.io/guideline/5.3.0.RELEASE/ja/ArchitectureInDetail/DataAccessDetail/DataAccessMyBatis3.html#dataaccessmybatis3howtousesettingsmybatis3)
      - [3.2. ドメイン層の実装 — TERASOLUNA Server Framework for Java (5.x) Development Guideline 5.3.0.RELEASE documentation](http://terasolunaorg.github.io/guideline/5.3.0.RELEASE/ja/ImplementationAtEachLayer/DomainLayer.html#id8)
@@ -760,7 +762,7 @@ pom.xmlに以下を追加
 
 ```
 # [root@78d330111e2f app]# mvn package
-# [root@78d330111e2f app]# java -jar target/command_helloapi.jar com.georgen.helloapi.command.Hello add 3 taro
+# [root@78d330111e2f app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.helloapi.command.Hello add 3 taro
   mode : add
   args count : 4
   added!
@@ -792,7 +794,7 @@ pom.xmlに以下を追加。
 
 ```
 # [root@78d330111e2f app]# mvn package
-# [root@78d330111e2f app]# java -jar target/command_helloapi.jar com.georgen.helloapi.command.Hello add 5 taro2
+# [root@78d330111e2f app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.helloapi.command.Hello add 5 taro2
 id: 5 | name: taro2
 ```
 

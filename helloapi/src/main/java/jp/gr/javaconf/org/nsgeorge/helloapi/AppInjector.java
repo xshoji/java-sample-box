@@ -1,7 +1,7 @@
-package com.georgen.helloapi;
+package jp.gr.javaconf.org.nsgeorge.helloapi;
 
 
-import com.georgen.helloapi.service.MyBatisManager;
+import jp.gr.javaconf.org.nsgeorge.helloapi.service.MyBatisManager;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import org.apache.ibatis.session.SqlSessionFactory;

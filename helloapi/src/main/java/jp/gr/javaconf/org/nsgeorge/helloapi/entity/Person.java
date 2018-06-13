@@ -1,4 +1,4 @@
-package com.georgen.helloapi.entity;
+package jp.gr.javaconf.org.nsgeorge.helloapi.entity;
 
 import java.io.Serializable;
 

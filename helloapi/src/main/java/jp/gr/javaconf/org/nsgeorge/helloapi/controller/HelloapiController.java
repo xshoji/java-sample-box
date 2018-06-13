@@ -1,7 +1,7 @@
-package com.georgen.helloapi.controller;
+package jp.gr.javaconf.org.nsgeorge.helloapi.controller;
 
-import com.georgen.helloapi.service.Calculator;
-import com.georgen.helloapi.service.Caller;
+import jp.gr.javaconf.org.nsgeorge.helloapi.service.Calculator;
+import jp.gr.javaconf.org.nsgeorge.helloapi.service.Caller;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

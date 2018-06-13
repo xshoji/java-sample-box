@@ -1,17 +1,12 @@
-package com.georgen.helloapi.command;
+package jp.gr.javaconf.org.nsgeorge.helloapi.command;
 
-import com.georgen.helloapi.AppInjector;
-import com.georgen.helloapi.entity.Person;
-import com.georgen.helloapi.repository.PersonRepositroy;
-import com.georgen.helloapi.service.Calculator;
-import com.georgen.helloapi.service.Caller;
-import com.georgen.helloapi.service.MyBatisManager;
-import com.google.inject.AbstractModule;
+import jp.gr.javaconf.org.nsgeorge.helloapi.AppInjector;
+import jp.gr.javaconf.org.nsgeorge.helloapi.entity.Person;
+import jp.gr.javaconf.org.nsgeorge.helloapi.repository.PersonRepositroy;
+import jp.gr.javaconf.org.nsgeorge.helloapi.service.Calculator;
+import jp.gr.javaconf.org.nsgeorge.helloapi.service.Caller;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.google.inject.Provides;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

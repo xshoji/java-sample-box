@@ -1,10 +1,10 @@
-package com.georgen.helloapi.repository.mapper;
+package jp.gr.javaconf.org.nsgeorge.helloapi.repository.mapper;
 
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Param;
-import com.georgen.helloapi.entity.Person;
+import jp.gr.javaconf.org.nsgeorge.helloapi.entity.Person;
 
 public interface PersonMapper
 {
