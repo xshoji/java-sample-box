@@ -1,8 +1,0 @@
-/target/*
-!/target/.gitkeep
-*.iml
-
-.idea
-nbproject
-.swp
-.DS_Store
