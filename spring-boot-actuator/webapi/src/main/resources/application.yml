@@ -1,0 +1,29 @@
+spring:
+  jackson:
+    dateFormat: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Tokyo
+#Exposes Spring actuator endpoints
+management:
+  health:
+    diskspace:
+      enabled: true
+    db:
+      enabled: true
+    details:
+      enabled: true
+    application:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+  metrics:
+    export:
+      datadog:
+        enabled: false
+# References
+# - [spring-actuator-example/application.yml at master · indrabasak/spring-actuator-example](https://github.com/indrabasak/spring-actuator-example/blob/master/src/main/resources/application.yml#L8)
