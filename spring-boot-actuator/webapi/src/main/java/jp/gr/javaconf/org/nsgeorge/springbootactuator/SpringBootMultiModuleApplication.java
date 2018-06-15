@@ -33,9 +33,9 @@ public class SpringBootMultiModuleApplication {
         protected Date createdOn;
     }
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootMultiModuleApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootMultiModuleApplication.class, args);
+    }
 
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
     @ResponseStatus(HttpStatus.OK)
