@@ -1,8 +1,8 @@
-# spring-boot-actuator-2.0
+# spring-boot-prometheus
 
 ```
 $ mvn clean package
-$ java -jar webapi/target/spring-boot-actuator-webapi-0.0.1-SNAPSHOT.jar
+$ java -jar webapi/target/spring-boot-prometheus-webapi-0.0.1-SNAPSHOT.jar
 
 // Comment
 //// Add
