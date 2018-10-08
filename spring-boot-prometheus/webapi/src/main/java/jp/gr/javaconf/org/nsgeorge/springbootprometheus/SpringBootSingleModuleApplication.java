@@ -1,11 +1,12 @@
 package jp.gr.javaconf.org.nsgeorge.springbootprometheus;
 
+import io.prometheus.client.spring.boot.EnablePrometheusEndpoint;
+import io.prometheus.client.spring.boot.EnableSpringBootMetricsCollector;
 import lombok.Data;
 import lombok.Getter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
-import org.springframework.metrics.export.prometheus.EnablePrometheusMetrics;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -18,7 +19,8 @@ import java.util.concurrent.ConcurrentMap;
 // > https://docs.spring.io/spring-metrics/docs/current/public/prometheus
 @SpringBootApplication
 @RestController
-@EnablePrometheusMetrics
+@EnablePrometheusEndpoint
+@EnableSpringBootMetricsCollector
 @RequestMapping("/comment")
 public class SpringBootSingleModuleApplication {
 
