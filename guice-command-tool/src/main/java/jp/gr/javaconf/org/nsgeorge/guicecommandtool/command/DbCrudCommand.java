@@ -1,9 +1,8 @@
 package jp.gr.javaconf.org.nsgeorge.guicecommandtool.command;
 
-import jp.gr.javaconf.org.nsgeorge.guicecommandtool.dao.HibernateUtil;
+import com.google.inject.Inject;
 import jp.gr.javaconf.org.nsgeorge.guicecommandtool.dao.PersonDao;
 import jp.gr.javaconf.org.nsgeorge.guicecommandtool.entity.Person;
-import com.google.inject.Inject;
 import org.kohsuke.args4j.Option;
 
 import java.text.SimpleDateFormat;

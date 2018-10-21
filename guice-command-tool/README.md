@@ -49,15 +49,15 @@ Groovy Version: 2.4.9 JVM: 1.8.0_131 Vendor: Oracle Corporation OS: Mac OS X
 ```
 // Build as "dev" environment
 $ mvn clean package -Pdev
-$ java -jar target/jcommand-0.0.1-make-jar.jar
-$ java -jar target/jcommand-0.0.1-make-jar.jar SampleCommand -h
-$ java -jar target/jcommand-0.0.1-make-jar.jar SampleCommand -title Taro
+$ java -jar target/guice-command-tool-0.0.1-make.jar
+$ java -jar target/guice-command-tool-0.0.1-make.jar SampleCommand -h
+$ java -jar target/guice-command-tool-0.0.1-make.jar SampleCommand -title Taro
 ```
 
 ### Build and Run without test
 
 ```
-$ mvn clean package -Pdev -Dmaven.test.skip=true && java -jar target/jcommand-0.0.1-make-jar.jar PrintPropertiesCommand
+$ mvn clean package -Pdev -Dmaven.test.skip=true && java -jar target/guice-command-tool-0.0.1-make.jar PrintPropertiesCommand
 ```
 
 # Run unit test

@@ -1,10 +1,8 @@
 package jp.gr.javaconf.org.nsgeorge.guicecommandtool.command;
 
-import jp.gr.javaconf.org.nsgeorge.guicecommandtool.dao.HibernateUtil;
 import com.google.inject.Inject;
 import org.hibernate.boot.Metadata;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
-import org.hibernate.tool.hbm2ddl.SchemaUpdate;
 import org.hibernate.tool.schema.TargetType;
 import org.kohsuke.args4j.Option;
 
