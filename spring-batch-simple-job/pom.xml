@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.github.xshoji.javasamplebox</groupId>
-	<artifactId>spring-batch</artifactId>
+	<artifactId>spring-batch-simple-job</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-batch</name>
-	<description>Demo project for Spring Boot</description>
+	<name>spring-batch-simple-job</name>
+	<description>Simple Job Application by Spring Batch</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

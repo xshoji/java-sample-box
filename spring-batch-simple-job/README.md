@@ -7,32 +7,32 @@
 mvn package -Dmaven.test.skip=true
 
 // Execute all jobs
-java -jar target/spring-batch-0.0.1-SNAPSHOT.jar
+java -jar target/spring-batch-simple-job-0.0.1-SNAPSHOT.jar
 
 // Execute specify job
-java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=EchoJob
+java -jar target/spring-batch-simple-job-0.0.1-SNAPSHOT.jar --spring.batch.job.names=EchoJob
 
 // Execute specify job with parameters
-java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=ArgumentJob --name=xshoji
+java -jar target/spring-batch-simple-job-0.0.1-SNAPSHOT.jar --spring.batch.job.names=ArgumentJob --name=xshoji
 ```
 
 ## List up job names
 
 ```
-java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=ListJobNamesJob
+java -jar target/spring-batch-simple-job-0.0.1-SNAPSHOT.jar --spring.batch.job.names=ListJobNamesJob
 ```
 
 ## Create new job
 
 ```
 // Create job template classes
-java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=JobCreationJob --jobName=Something
+java -jar target/spring-batch-simple-job-0.0.1-SNAPSHOT.jar --spring.batch.job.names=JobCreationJob --jobName=Something
 
 // Build with generated job
 mvn clean package -Dmaven.test.skip=true
 
 // Execute created job
-java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=SomethingJob
+java -jar target/spring-batch-simple-job-0.0.1-SNAPSHOT.jar --spring.batch.job.names=SomethingJob
 ```
 
 
