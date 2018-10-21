@@ -13,6 +13,19 @@ java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=EchoJo
 java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=ArgumentJob --name=xshoji
 ```
 
+## Create new job
+
+```
+// Create job template classes
+java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=JobCreationJob --jobName=Something
+
+// Build with generated job
+mvn clean package -Dmaven.test.skip=true
+
+// Execute created job
+java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=SomethingJob
+```
+
 
 > java - Spring boot + spring batch without DataSource - Stack Overflow  
 > https://stackoverflow.com/questions/39913918/spring-boot-spring-batch-without-datasource
@@ -28,3 +41,12 @@ java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=Argume
 
 > java - Can I set null as the default value for a @Value in Spring? - Stack Overflow  
 > https://stackoverflow.com/questions/11991194/can-i-set-null-as-the-default-value-for-a-value-in-spring
+
+> How to really read text file from classpath in Java - Stack Overflow  
+> https://stackoverflow.com/questions/1464291/how-to-really-read-text-file-from-classpath-in-java
+
+> Get the target directory path in Maven (Java) - Stack Overflow  
+> https://stackoverflow.com/questions/38558720/get-the-target-directory-path-in-maven-java
+
+> java - Find and replace words/lines in a file - Stack Overflow  
+> https://stackoverflow.com/questions/3935791/find-and-replace-words-lines-in-a-file
