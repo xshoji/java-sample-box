@@ -18,16 +18,16 @@ public class ArgumentJob extends JobBase {
     private ArgumentTasklet tasklet;
 
     @Bean
-    public Job job2() {
+    public Job createArgumentJob() {
         return jobBuilderFactory
                 .get("ArgumentJob")
                 .incrementer(new RunIdIncrementer())
-                .start(step2())
+                .start(createArgumentJobStep())
                 .build();
     }
 
     @Bean
-    public Step step2() {
+    public Step createArgumentJobStep() {
         return stepBuilderFactory.get(getClass() + "Step").tasklet(tasklet).build();
     }
 }

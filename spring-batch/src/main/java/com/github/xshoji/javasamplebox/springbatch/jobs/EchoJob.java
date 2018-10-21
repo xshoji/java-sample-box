@@ -18,16 +18,16 @@ public class EchoJob extends JobBase {
     private EchoTasklet tasklet;
 
     @Bean
-    public Job job1() {
+    public Job createEchoJob() {
         return jobBuilderFactory
                 .get("EchoJob")
                 .incrementer(new RunIdIncrementer())
-                .start(step1())
+                .start(createEchoJobStep())
                 .build();
     }
 
     @Bean
-    public Step step1() {
+    public Step createEchoJobStep() {
         return stepBuilderFactory.get(getClass() + "Step").tasklet(tasklet).build();
     }
 }
