@@ -4,6 +4,7 @@ import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,10 +13,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class ArgumentTasklet implements Tasklet {
 
+    @Value("${name:#{null}}")
+    private String name;
+
     @Override
     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
-        // Get command line parameters
-        String name = (String) chunkContext.getStepContext().getJobParameters().get("name");
         System.out.println("");
         System.out.println("[ ArgumentTasklet ]");
         if (name == null) {
