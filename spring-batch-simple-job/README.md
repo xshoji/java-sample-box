@@ -65,3 +65,6 @@ java -jar target/spring-batch-simple-job-0.0.1-SNAPSHOT.jar --spring.batch.job.n
 
 > Java access files in jar causes java.nio.file.FileSystemNotFoundException - Stack Overflow  
 > https://stackoverflow.com/questions/22605666/java-access-files-in-jar-causes-java-nio-file-filesystemnotfoundexception
+
+> Java8 の Stream 取得方法あれこれ - A Memorandum  
+> http://etc9.hatenablog.com/entry/2015/05/07/195629
