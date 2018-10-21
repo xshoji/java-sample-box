@@ -39,10 +39,6 @@ public class JobCreationTasklet implements Tasklet {
             return RepeatStatus.FINISHED;
         }
 
-        System.out.println(this.getClass().getClassLoader().getResource("").toURI());
-        System.out.println(this.getClass().getClassLoader().getResource("template").toURI());
-        System.out.println(this.getClass().getClassLoader().getResource("template/JobTemplate.java").toURI());
-
         // Get path (Template files and Destinatin files)
         InputStream originalFileJob = this.getClass().getClassLoader().getResourceAsStream("template/JobTemplate.java");
         InputStream originalFileTasklet = this.getClass().getClassLoader().getResourceAsStream("template/TaskletTemplate.java");

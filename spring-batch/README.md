@@ -50,3 +50,9 @@ java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=Someth
 
 > java - Find and replace words/lines in a file - Stack Overflow  
 > https://stackoverflow.com/questions/3935791/find-and-replace-words-lines-in-a-file
+
+> java - How to get the path of a running JAR file? - Stack Overflow  
+> https://stackoverflow.com/questions/320542/how-to-get-the-path-of-a-running-jar-file
+
+> Java access files in jar causes java.nio.file.FileSystemNotFoundException - Stack Overflow  
+> https://stackoverflow.com/questions/22605666/java-access-files-in-jar-causes-java-nio-file-filesystemnotfoundexception
