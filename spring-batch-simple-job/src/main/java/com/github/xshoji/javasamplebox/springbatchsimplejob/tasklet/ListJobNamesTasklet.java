@@ -7,6 +7,7 @@ import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.net.URI;
@@ -26,13 +27,21 @@ import java.util.stream.Collectors;
 @Component
 public class ListJobNamesTasklet implements Tasklet {
 
-    @Autowired
-    JobExplorer jobExplorer;
+    @Value("${printDetails:#{false}}")
+    private boolean printDetails;
 
     @Override
     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
         System.out.println("");
         System.out.println("[ ListJobNamesTasklet ]");
+
+        if (printDetails) {
+            System.out.println("SpringBatchApplication.class >> " + SpringBatchApplication.class);
+            System.out.println("getProtectionDomain >> " + SpringBatchApplication.class.getProtectionDomain());
+            System.out.println("getCodeSource >> " + SpringBatchApplication.class.getProtectionDomain().getCodeSource());
+            System.out.println("getLocation >> " + SpringBatchApplication.class.getProtectionDomain().getCodeSource().getLocation());
+            System.out.println("toURI >> " + SpringBatchApplication.class.getProtectionDomain().getCodeSource().getLocation().toURI());
+        }
 
         String[] uriArray = SpringBatchApplication.class.getProtectionDomain().getCodeSource().getLocation().toURI().toString().split("!");
         String jarPath = uriArray[0].replaceAll("jar:file:", "");
