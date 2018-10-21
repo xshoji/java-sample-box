@@ -3,6 +3,9 @@
 ## Usage
 
 ```
+// Build
+mvn package -Dmaven.test.skip=true
+
 // Execute all jobs
 java -jar target/spring-batch-0.0.1-SNAPSHOT.jar
 
@@ -11,6 +14,12 @@ java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=EchoJo
 
 // Execute specify job with parameters
 java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=ArgumentJob --name=xshoji
+```
+
+## List up job names
+
+```
+java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=ListJobNamesJob
 ```
 
 ## Create new job
