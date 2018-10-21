@@ -25,8 +25,8 @@ public class PatternCommand extends Command {
         Matcher matcher = pattern.matcher(targetString);
 
         this.systemOutPrintln("<< Info >>");
-        this.systemOutPrintln("patternString:" + patternString);
-        this.systemOutPrintln("targetString:" + targetString);
+        this.systemOutPrintln("patternString: " + patternString);
+        this.systemOutPrintln("targetString: " + targetString);
         this.systemOutPrintln("");
         this.systemOutPrintln("<< Pattern and Matcher >>");
         this.systemOutPrintln("[ find 1 ]");
