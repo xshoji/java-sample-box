@@ -12,15 +12,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class ArgumentTasklet implements Tasklet {
 
-//    @Value("#{jobParameters[name]?:xshoji}")  // (2)
-    private String name = "xshoji";
-
     @Override
     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
+        // Get command line parameters
+        String name = (String) chunkContext.getStepContext().getJobParameters().get("name");
         System.out.println("");
         System.out.println("[ ArgumentTasklet ]");
         if (name == null) {
             System.out.println("ERROR: Name is null");
+            System.out.println("");
             return RepeatStatus.FINISHED;
         }
         System.out.println("Name: " + name);

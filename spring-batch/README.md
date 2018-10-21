@@ -1,4 +1,18 @@
-## spring-batch
+# spring-batch
+
+## Usage
+
+```
+// Execute all jobs
+java -jar target/spring-batch-0.0.1-SNAPSHOT.jar
+
+// Execute specify job
+java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=EchoJob
+
+// Execute specify job with parameters
+java -jar target/spring-batch-0.0.1-SNAPSHOT.jar --spring.batch.job.names=ArgumentJob -name=xshoji
+```
+
 
 > java - Spring boot + spring batch without DataSource - Stack Overflow  
 > https://stackoverflow.com/questions/39913918/spring-boot-spring-batch-without-datasource
