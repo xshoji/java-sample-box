@@ -1,4 +1,4 @@
-package jp.gr.javaconf.org.nsgeorge.springbootembeddeddb;
+package io.github.xshoji.springbootembeddeddb;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

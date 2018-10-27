@@ -1,8 +1,8 @@
-package jp.gr.javaconf.org.nsgeorge.springbootembeddeddb.domain.entity;//package com.example.demo.common.entity;
+package io.github.xshoji.springbootembeddeddb.domain.entity;//package com.example.demo.common.entity;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jp.gr.javaconf.org.nsgeorge.springbootembeddeddb.domain.repository.CommentRepository;
+import io.github.xshoji.springbootembeddeddb.domain.repository.CommentRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

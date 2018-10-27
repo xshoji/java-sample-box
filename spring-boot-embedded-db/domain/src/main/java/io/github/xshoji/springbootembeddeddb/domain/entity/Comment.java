@@ -1,4 +1,4 @@
-package jp.gr.javaconf.org.nsgeorge.springbootembeddeddb.domain.entity;
+package io.github.xshoji.springbootembeddeddb.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

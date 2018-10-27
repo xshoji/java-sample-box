@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>jp.gr.javaconf.org.nsgeorge</groupId>
+		<groupId>io.github.xshoji</groupId>
 		<artifactId>spring-boot-embedded-db</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -17,7 +17,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>jp.gr.javaconf.org.nsgeorge</groupId>
+			<groupId>io.github.xshoji</groupId>
 			<artifactId>spring-boot-embedded-db-domain</artifactId>
 			<version>${project.version}</version>
 		</dependency>
