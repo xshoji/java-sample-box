@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>jp.gr.javaconf.org.nsgeorge</groupId>
+		<groupId>io.github.xshoji</groupId>
 		<artifactId>spring-boot-prometheus</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>

@@ -1,4 +1,4 @@
-package jp.gr.javaconf.org.nsgeorge.springbootprometheus;
+package io.github.xshoji.springbootprometheus;
 
 import io.prometheus.client.spring.boot.EnablePrometheusEndpoint;
 import io.prometheus.client.spring.boot.EnableSpringBootMetricsCollector;
