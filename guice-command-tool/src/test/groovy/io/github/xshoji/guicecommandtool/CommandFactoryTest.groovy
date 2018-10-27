@@ -1,12 +1,12 @@
-package jp.gr.javaconf.org.nsgeorge.guicecommandtool
+package io.github.xshoji.guicecommandtool
 
-import jp.gr.javaconf.org.nsgeorge.guicecommandtool.CommandFactory
-import jp.gr.javaconf.org.nsgeorge.guicecommandtool.command.DbCrudCommand
-import jp.gr.javaconf.org.nsgeorge.guicecommandtool.command.DbSchemaCommand
-import jp.gr.javaconf.org.nsgeorge.guicecommandtool.command.LogCommand
-import jp.gr.javaconf.org.nsgeorge.guicecommandtool.command.NullCommand
-import jp.gr.javaconf.org.nsgeorge.guicecommandtool.command.CallWebApiCommand
-import jp.gr.javaconf.org.nsgeorge.guicecommandtool.command.ReadFileCommand
+import io.github.xshoji.guicecommandtool.CommandFactory
+import io.github.xshoji.guicecommandtool.command.DbCrudCommand
+import io.github.xshoji.guicecommandtool.command.DbSchemaCommand
+import io.github.xshoji.guicecommandtool.command.LogCommand
+import io.github.xshoji.guicecommandtool.command.NullCommand
+import io.github.xshoji.guicecommandtool.command.CallWebApiCommand
+import io.github.xshoji.guicecommandtool.command.ReadFileCommand
 import com.google.inject.Guice
 import com.google.inject.Injector
 import spock.lang.Specification
@@ -21,7 +21,7 @@ class CommandFactoryTest extends Specification
     def "Command Factory#createCommand"() {
         // spock-workshop/docs at master · yamkazu/spock-workshop https://github.com/yamkazu/spock-workshop/tree/master/docs
         setup:
-        Injector injector = Guice.createInjector(new jp.gr.javaconf.org.nsgeorge.guicecommandtool.Injector() {})
+        Injector injector = Guice.createInjector(new io.github.xshoji.guicecommandtool.Injector() {})
         CommandFactory factory = injector.getInstance(CommandFactory.class)
 
         expect:

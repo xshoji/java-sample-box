@@ -1,6 +1,5 @@
-package jp.gr.javaconf.org.nsgeorge.guicecommandtool
+package io.github.xshoji.guicecommandtool
 
-import jp.gr.javaconf.org.nsgeorge.guicecommandtool.App;
 import spock.lang.Specification
 import spock.lang.Unroll
 

@@ -3,7 +3,7 @@
 
   <!-- ■　プロジェクト設定 -->
   <modelVersion>4.0.0</modelVersion>
-  <groupId>jp.gr.javaconf.org.nsgeorge</groupId>
+  <groupId>io.github.xshoji</groupId>
   <artifactId>guice-command-tool</artifactId>
   <packaging>jar</packaging>
   <version>0.0.1</version>
@@ -85,7 +85,7 @@
           </descriptors>
           <archive>
             <manifest>
-              <mainClass>jp.gr.javaconf.org.nsgeorge.guicecommandtool.App</mainClass>
+              <mainClass>io.github.xshoji.guicecommandtool.App</mainClass>
             </manifest>
           </archive>
         </configuration>

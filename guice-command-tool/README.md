@@ -50,8 +50,8 @@ Groovy Version: 2.4.9 JVM: 1.8.0_131 Vendor: Oracle Corporation OS: Mac OS X
 // Build as "dev" environment
 $ mvn clean package -Pdev
 $ java -jar target/guice-command-tool-0.0.1-make.jar
-$ java -jar target/guice-command-tool-0.0.1-make.jar SampleCommand -h
-$ java -jar target/guice-command-tool-0.0.1-make.jar SampleCommand -title Taro
+$ java -jar target/guice-command-tool-0.0.1-make.jar CallWebApiCommand -h
+$ java -jar target/guice-command-tool-0.0.1-make.jar CallWebApiCommand -title Taro
 ```
 
 ### Build and Run without test
@@ -89,7 +89,7 @@ https://stackoverflow.com/questions/9772557/using-google-guice-to-to-inject-java
 
 
 google guice inject value - Google 検索
-https://www.google.co.jp/search?q=google+guice+maven+property+injection&oq=google+guice+maven+&aqs=chrome.1.69i59l2j69i57j69i59j0l2.9332j0j4&sourceid=chrome&ie=UTF-8#q=google+guice+inject+value&tbas=0
+https://www.google.co.io/search?q=google+guice+maven+property+injection&oq=google+guice+maven+&aqs=chrome.1.69i59l2j69i57j69i59j0l2.9332j0j4&sourceid=chrome&ie=UTF-8#q=google+guice+inject+value&tbas=0
 
 
 java - Guice and properties files - Stack Overflow
@@ -105,7 +105,7 @@ https://groups.google.com/forum/#!topic/google-guice/XfQtciyD-94
 
 
 Google Guice: Agile Lightweight Dependency Injection Framework - Robbie Vanbrabant - Google ブックス
-https://books.google.co.jp/books?id=s9Yr6gnhE90C&pg=PA43&lpg=PA43&dq=google+guice+getResourceAsStream&source=bl&ots=-UhfVP4zEZ&sig=i4g_UQe1j-jmaxmYpOqld_2-EEA&hl=ja&sa=X&ved=0ahUKEwjF4KXQ0JrUAhUBuJQKHcX0B5kQ6AEIaTAI#v=onepage&q=google%20guice%20getResourceAsStream&f=false
+https://books.google.co.io/books?id=s9Yr6gnhE90C&pg=PA43&lpg=PA43&dq=google+guice+getResourceAsStream&source=bl&ots=-UhfVP4zEZ&sig=i4g_UQe1j-jmaxmYpOqld_2-EEA&hl=ja&sa=X&ved=0ahUKEwjF4KXQ0JrUAhUBuJQKHcX0B5kQ6AEIaTAI#v=onepage&q=google%20guice%20getResourceAsStream&f=false
 
 
 java - getResourceAsStream() is returning null. Properties file is not loading - Stack Overflow
@@ -116,7 +116,7 @@ Java - javaで実装上特に不要だがinterfaceを継承する設計(29968)�
 https://teratail.com/questions/29968
 
 (その10) 同じ型で異なる実装クラスをinjectしたい場合 - あるまに
-http://d.hatena.ne.jp/arumani/20070316/1174056699
+http://d.hatena.ne.io/arumani/20070316/1174056699
 
 Creating multiple instances of the same object with different dependencies - Google グループ
 https://groups.google.com/forum/#!topic/google-guice/RCBw_I-H45g

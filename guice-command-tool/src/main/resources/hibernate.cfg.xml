@@ -31,6 +31,6 @@
 
         <!-- マッピングテーブル -->
         <!-- java - Hibernate-Unable to load class declared in Hibernate configuration </mapping> entry - Stack Overflow https://stackoverflow.com/questions/29721856/hibernate-unable-to-load-class-declared-in-hibernate-configuration-mapping-en  -->
-        <mapping class="jp.gr.javaconf.org.nsgeorge.guicecommandtool.entity.Person"/>
+        <mapping class="io.github.xshoji.guicecommandtool.entity.Person"/>
     </session-factory>
 </hibernate-configuration>
