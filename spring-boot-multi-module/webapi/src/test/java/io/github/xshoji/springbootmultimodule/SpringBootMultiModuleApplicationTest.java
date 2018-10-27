@@ -1,4 +1,4 @@
-package jp.gr.javaconf.org.nsgeorge.springbootmultimodule;
+package io.github.xshoji.springbootmultimodule;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

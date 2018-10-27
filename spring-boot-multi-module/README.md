@@ -1,12 +1,15 @@
 # spring-boot-multi-module
 
 ```
-$ mvn package
-$ java -jar webapi/target/spring-boot-multi-module-webapi-0.0.1-SNAPSHOT.jar
+// Build
+mvn package -Dmaven.test.skip=true
+
+// Boot application
+java -jar webapi/target/spring-boot-multi-module-webapi-0.0.1-SNAPSHOT.jar
 
 // Add
-$ curl -H "Content-Type: application/json" localhost:8080/comment/{message}
+curl -H "Content-Type: application/json" localhost:8080/comment/{user}/{message}
 
 // Get
-$ curl -H "Content-Type: application/json" localhost:8080/comment/
+curl -H "Content-Type: application/json" localhost:8080/comment/{user}
 ```

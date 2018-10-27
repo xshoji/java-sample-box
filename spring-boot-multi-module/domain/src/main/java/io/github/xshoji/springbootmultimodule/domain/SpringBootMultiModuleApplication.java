@@ -1,4 +1,4 @@
-package jp.gr.javaconf.org.nsgeorge.springbootmultimodule.domain;
+package io.github.xshoji.springbootmultimodule.domain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
