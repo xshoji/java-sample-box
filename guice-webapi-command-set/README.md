@@ -21,61 +21,20 @@ git version 2.9.3 (Apple Git-75)
 ## 動かし方
 
 ```
-$ git clone git@gitlab.com:george.n/helloapi.git
-Cloning into 'helloapi'...
-remote: Counting objects: 26, done.
-remote: Compressing objects: 100% (18/18), done.
-remote: Total 26 (delta 0), reused 0 (delta 0)
-Receiving objects: 100% (26/26), 9.64 KiB | 0 bytes/s, done.
-Checking connectivity... done.
-$ cd helloapi/docker/
-$ cp config.sh.dist config.sh
-$ sh docker-compose.sh
-
-...
-
-    Name                   Command               State                           Ports
---------------------------------------------------------------------------------------------------------------
-helloapi_java   /usr/bin/supervisord -n -- ...   Up      0.0.0.0:2222->22/tcp, 80/tcp, 0.0.0.0:18080->8080/tcp
-
-Success!!
-$ docker exec -it helloapi_java /bin/bash
-[root@96be5cb5c011 src]#
-[root@96be5cb5c011 app]# mvn --version
-Apache Maven 3.5.0 (ff8f5e7444045639af65f6095c62210b5713f426; 2017-04-03T19:39:06Z)
-Maven home: /opt/apache-maven-3.5.0
-Java version: 1.8.0_102, vendor: Oracle Corporation
-Java home: /usr/java/jdk1.8.0_102/jre
-Default locale: en_US, platform encoding: UTF-8
-OS name: "linux", version: "4.9.13-moby", arch: "amd64", family: "unix"
-[root@96be5cb5c011 app]#
-[root@96be5cb5c011 src]# cd /app
-[root@96be5cb5c011 src]# mvn package
-
-...
-
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 01:04 min
-[INFO] Finished at: 2017-04-29T17:30:16Z
-[INFO] Final Memory: 20M/180M
-[INFO] ------------------------------------------------------------------------
-[root@96be5cb5c011 app]# mvn tomcat7:run
-```
-
- - http://localhost:18080/helloapi/hello/call?name=taro
-
-で`Hello! taro`って出る。
-
-```
+# Build
 $ cd docker
 $ docker-compose up -d
+$ cd ..
 $ mvn package
+
+# Start application
 $ mvn tomcat7:run
+
+# Call webapi
 $ curl -H "Content-Type: application/json" localhost:8080/guice-webapi-command-set/hello/call?name=taro; echo
 $ curl -H "Content-Type: application/json" localhost:8080/guice-webapi-command-set/hello/calc?x=1\&y=2; echo
-$ java -jar target/guice-webapi-command-set-cli.jar
+
+# Execute cli tool
 $ java -jar target/guice-webapi-command-set-cli.jar test call name
 $ java -jar target/guice-webapi-command-set-cli.jar test sum 1 2
 ```
@@ -123,7 +82,7 @@ Caskroom/cask/mavensmate
 [04-30 00:54:06 ~]$ brew install maven@3.3
 ==> Using the sandbox
 ==> Downloading https://www.apache.org/dyn/closer.cgi?path=maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
-==> Best Mirror http://ftp.yz.yamagata-u.ac.jp/pub/network/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+==> Best Mirror http://ftp.yz.yamagata-u.ac.io/pub/network/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
 ######################################################################## 100.0%
 🍺  /usr/local/Cellar/maven@3.3/3.3.9: 95 files, 9.6MB, built in 7 seconds
 [04-30 00:54:26 ~]$ mvn
@@ -365,8 +324,8 @@ API動いていない・・・。
 
 ```
 [root@3f7457635137 app]# mvn package
-[root@3f7457635137 app]# java -cp target/helloapi.war jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command.HelloapiCommand test
-Error: Could not find or load main class jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command.HelloapiCommand
+[root@3f7457635137 app]# java -cp target/helloapi.war io.github.xshoji.guicewebapicommandset.command.HelloapiCommand test
+Error: Could not find or load main class io.github.xshoji.guicewebapicommandset.command.HelloapiCommand
 [root@3f7457635137 app]#
 ```
 
@@ -446,7 +405,7 @@ Error: Could not find or load main class jp.gr.javaconf.org.nsgeorge.guicewebapi
           <appendAssemblyId>false</appendAssemblyId>
           <archive>
             <manifest>
-              <mainClass>jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command.HelloapiCommand</mainClass>
+              <mainClass>io.github.xshoji.guicewebapicommandset.command.HelloapiCommand</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -469,9 +428,9 @@ Error: Could not find or load main class jp.gr.javaconf.org.nsgeorge.guicewebapi
 [INFO] Finished at: 2017-05-07T07:53:04Z
 [INFO] Final Memory: 16M/189M
 [INFO] ------------------------------------------------------------------------
-[root@3f7457635137 app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command.HelloapiCommand call tom!
+[root@3f7457635137 app]# java -jar target/command_helloapi.jar io.github.xshoji.guicewebapicommandset.command.HelloapiCommand call tom!
 Hello! tom!
-[root@3f7457635137 app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command.HelloapiCommand sum 1 2
+[root@3f7457635137 app]# java -jar target/command_helloapi.jar io.github.xshoji.guicewebapicommandset.command.HelloapiCommand sum 1 2
 x:1 + y:2 = sum:3
 [root@3f7457635137 app]#
 ```
@@ -503,9 +462,9 @@ x:1 + y:2 = sum:3
 [INFO] Finished at: 2017-05-07T08:12:49Z
 [INFO] Final Memory: 21M/196M
 [INFO] ------------------------------------------------------------------------
-[root@3f7457635137 app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command.HelloapiCommand call hideo
+[root@3f7457635137 app]# java -jar target/command_helloapi.jar io.github.xshoji.guicewebapicommandset.command.HelloapiCommand call hideo
 Hello! hideo
-[root@3f7457635137 app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command.HelloapiCommand sum 1 2
+[root@3f7457635137 app]# java -jar target/command_helloapi.jar io.github.xshoji.guicewebapicommandset.command.HelloapiCommand sum 1 2
 x:1 + y:2 = sum:3
 [root@3f7457635137 app]# mvn tomcat7:run
 [INFO] Scanning for projects...
@@ -697,7 +656,7 @@ pom.xmlに以下を追加
 ```
 
  - `resources/mybatis-config.xml`を追加
-     - `resources/mybatis-mapper.xml`は使わず、直接`<mapper class="jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.repository.mapper.PersonRepository"/>`を指定する
+     - `resources/mybatis-mapper.xml`は使わず、直接`<mapper class="io.github.xshoji.guicewebapicommandset.repository.mapper.PersonRepository"/>`を指定する
  - `src/main/java/com/georgen/helloapi/entity/Person.java`を追加
      - [6.2. データベースアクセス（MyBatis3編） — TERASOLUNA Server Framework for Java (5.x) Development Guideline 5.3.0.RELEASE documentation](http://terasolunaorg.github.io/guideline/5.3.0.RELEASE/ja/ArchitectureInDetail/DataAccessDetail/DataAccessMyBatis3.html#dataaccessmybatis3howtousesettingsmybatis3)
      - [3.2. ドメイン層の実装 — TERASOLUNA Server Framework for Java (5.x) Development Guideline 5.3.0.RELEASE documentation](http://terasolunaorg.github.io/guideline/5.3.0.RELEASE/ja/ImplementationAtEachLayer/DomainLayer.html#id8)
@@ -765,7 +724,7 @@ pom.xmlに以下を追加
 
 ```
 # [root@78d330111e2f app]# mvn package
-# [root@78d330111e2f app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command.Hello add 3 taro
+# [root@78d330111e2f app]# java -jar target/command_helloapi.jar io.github.xshoji.guicewebapicommandset.command.Hello add 3 taro
   mode : add
   args count : 4
   added!
@@ -797,7 +756,7 @@ pom.xmlに以下を追加。
 
 ```
 # [root@78d330111e2f app]# mvn package
-# [root@78d330111e2f app]# java -jar target/command_helloapi.jar jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command.Hello add 5 taro2
+# [root@78d330111e2f app]# java -jar target/command_helloapi.jar io.github.xshoji.guicewebapicommandset.command.Hello add 5 taro2
 id: 5 | name: taro2
 ```
 

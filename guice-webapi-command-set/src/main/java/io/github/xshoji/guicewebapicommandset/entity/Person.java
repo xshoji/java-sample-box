@@ -1,4 +1,4 @@
-package jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.entity;
+package io.github.xshoji.guicewebapicommandset.entity;
 
 import java.io.Serializable;
 

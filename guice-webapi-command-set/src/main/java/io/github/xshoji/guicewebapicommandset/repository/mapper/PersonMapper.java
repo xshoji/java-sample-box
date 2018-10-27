@@ -1,10 +1,10 @@
-package jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.repository.mapper;
+package io.github.xshoji.guicewebapicommandset.repository.mapper;
 
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Param;
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.entity.Person;
+import io.github.xshoji.guicewebapicommandset.entity.Person;
 
 public interface PersonMapper
 {

@@ -1,4 +1,4 @@
-package jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.service;
+package io.github.xshoji.guicewebapicommandset.service;
 
 import java.io.IOException;
 import java.io.Reader;

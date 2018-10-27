@@ -1,7 +1,7 @@
-package jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.controller;
+package io.github.xshoji.guicewebapicommandset.controller;
 
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.service.Calculator;
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.service.Caller;
+import io.github.xshoji.guicewebapicommandset.service.Calculator;
+import io.github.xshoji.guicewebapicommandset.service.Caller;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

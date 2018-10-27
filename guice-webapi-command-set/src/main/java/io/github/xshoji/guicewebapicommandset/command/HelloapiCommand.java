@@ -1,10 +1,10 @@
-package jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command;
+package io.github.xshoji.guicewebapicommandset.command;
 
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.AppInjector;
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.entity.Person;
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.repository.PersonRepositroy;
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.service.Calculator;
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.service.Caller;
+import io.github.xshoji.guicewebapicommandset.AppInjector;
+import io.github.xshoji.guicewebapicommandset.entity.Person;
+import io.github.xshoji.guicewebapicommandset.repository.PersonRepositroy;
+import io.github.xshoji.guicewebapicommandset.service.Calculator;
+import io.github.xshoji.guicewebapicommandset.service.Caller;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import org.slf4j.Logger;

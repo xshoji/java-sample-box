@@ -3,7 +3,7 @@
 
   <!-- ■　プロジェクト設定 -->
   <modelVersion>4.0.0</modelVersion>
-  <groupId>jp.gr.javaconf.org.nsgeorge</groupId>
+  <groupId>io.github.xshoji</groupId>
   <artifactId>guice-webapi-command-set</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -97,7 +97,7 @@
           <appendAssemblyId>false</appendAssemblyId>
           <archive>
             <manifest>
-              <mainClass>jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.command.HelloapiCommand</mainClass>
+              <mainClass>io.github.xshoji.guicewebapicommandset.command.HelloapiCommand</mainClass>
             </manifest>
           </archive>
         </configuration>

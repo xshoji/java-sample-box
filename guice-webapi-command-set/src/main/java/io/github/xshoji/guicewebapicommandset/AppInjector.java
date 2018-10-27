@@ -1,7 +1,7 @@
-package jp.gr.javaconf.org.nsgeorge.guicewebapicommandset;
+package io.github.xshoji.guicewebapicommandset;
 
 
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.service.MyBatisManager;
+import io.github.xshoji.guicewebapicommandset.service.MyBatisManager;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import org.apache.ibatis.session.SqlSessionFactory;

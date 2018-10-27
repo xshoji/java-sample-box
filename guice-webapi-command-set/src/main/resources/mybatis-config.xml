@@ -16,6 +16,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper class="jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.repository.mapper.PersonMapper"/>
+        <mapper class="io.github.xshoji.guicewebapicommandset.repository.mapper.PersonMapper"/>
     </mappers>
 </configuration>

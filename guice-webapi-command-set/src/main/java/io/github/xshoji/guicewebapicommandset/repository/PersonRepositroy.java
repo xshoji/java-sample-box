@@ -1,7 +1,7 @@
-package jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.repository;
+package io.github.xshoji.guicewebapicommandset.repository;
 
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.entity.Person;
-import jp.gr.javaconf.org.nsgeorge.guicewebapicommandset.repository.mapper.PersonMapper;
+import io.github.xshoji.guicewebapicommandset.entity.Person;
+import io.github.xshoji.guicewebapicommandset.repository.mapper.PersonMapper;
 import com.google.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
