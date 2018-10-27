@@ -1,4 +1,4 @@
-package jp.gr.javaconf.org.nsgeorge.springbootactuator;
+package io.github.xshoji.springbootactuator;
 
 import lombok.Data;
 import lombok.Getter;
