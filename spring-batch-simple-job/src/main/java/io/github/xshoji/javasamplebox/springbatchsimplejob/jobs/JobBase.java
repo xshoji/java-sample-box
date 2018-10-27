@@ -1,4 +1,4 @@
-package com.github.xshoji.javasamplebox.springbatchsimplejob.jobs;
+package io.github.xshoji.javasamplebox.springbatchsimplejob.jobs;
 
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;

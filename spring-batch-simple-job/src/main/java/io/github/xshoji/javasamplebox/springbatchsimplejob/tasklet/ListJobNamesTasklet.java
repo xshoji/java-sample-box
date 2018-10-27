@@ -1,12 +1,10 @@
-package com.github.xshoji.javasamplebox.springbatchsimplejob.tasklet;
+package io.github.xshoji.javasamplebox.springbatchsimplejob.tasklet;
 
-import com.github.xshoji.javasamplebox.springbatchsimplejob.SpringBatchApplication;
+import io.github.xshoji.javasamplebox.springbatchsimplejob.SpringBatchApplication;
 import org.springframework.batch.core.StepContribution;
-import org.springframework.batch.core.explore.JobExplorer;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -52,7 +50,7 @@ public class ListJobNamesTasklet implements Tasklet {
         JarFile jarFile = new JarFile(jarPath);
         Collections.list(jarFile.entries()).stream()
                 .filter(f -> f.toString().matches("BOOT-INF/classes/.*Job.class"))
-                .map(f -> f.toString().replaceAll("BOOT-INF/classes/com/github/xshoji/javasamplebox/springbatchsimplejob/jobs/", " - "))
+                .map(f -> f.toString().replaceAll("BOOT-INF/classes/io/github/xshoji/javasamplebox/springbatchsimplejob/jobs/", " - "))
                 .map(f -> f.toString().replaceAll(".class", ""))
                 .collect(Collectors.toList())
                 .forEach(s -> System.out.println(s));

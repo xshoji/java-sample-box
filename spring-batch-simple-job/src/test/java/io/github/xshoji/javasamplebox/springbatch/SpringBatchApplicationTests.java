@@ -1,4 +1,4 @@
-package com.github.xshoji.javasamplebox;
+package io.github.xshoji.javasamplebox.springbatch;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

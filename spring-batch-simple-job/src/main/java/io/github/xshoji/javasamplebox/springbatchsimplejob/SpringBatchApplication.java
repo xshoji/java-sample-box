@@ -1,4 +1,4 @@
-package com.github.xshoji.javasamplebox.springbatchsimplejob;
+package io.github.xshoji.javasamplebox.springbatchsimplejob;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
