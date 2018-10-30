@@ -1,6 +1,6 @@
-package io.github.xshoji.javasamplebox.springbatchsimplejob.jobs;
+package io.github.xshoji.springbatchsimplejob.jobs;
 
-import io.github.xshoji.javasamplebox.springbatchsimplejob.tasklet.ListJobNamesTasklet;
+import io.github.xshoji.springbatchsimplejob.tasklet.ListJobNamesTasklet;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;

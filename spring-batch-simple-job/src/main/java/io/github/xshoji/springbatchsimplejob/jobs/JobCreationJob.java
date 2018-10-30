@@ -1,6 +1,6 @@
-package io.github.xshoji.javasamplebox.springbatchsimplejob.jobs;
+package io.github.xshoji.springbatchsimplejob.jobs;
 
-import io.github.xshoji.javasamplebox.springbatchsimplejob.tasklet.EchoTasklet;
+import io.github.xshoji.springbatchsimplejob.tasklet.JobCreationTasklet;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
@@ -12,22 +12,22 @@ import org.springframework.context.annotation.Configuration;
  * Created by shojinao on 2018/10/21.
  */
 @Configuration
-public class EchoJob extends JobBase {
+public class JobCreationJob extends JobBase {
 
     @Autowired
-    private EchoTasklet tasklet;
+    private JobCreationTasklet tasklet;
 
     @Bean
-    public Job createEchoJob() {
+    public Job createJobCreationJob() {
         return jobBuilderFactory
-                .get("EchoJob")
+                .get("JobCreationJob")
                 .incrementer(new RunIdIncrementer())
-                .start(createEchoJobStep())
+                .start(createJobCreationJobStep())
                 .build();
     }
 
     @Bean
-    public Step createEchoJobStep() {
+    public Step createJobCreationJobStep() {
         return stepBuilderFactory.get(getClass() + "Step").tasklet(tasklet).build();
     }
 }

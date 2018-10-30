@@ -1,6 +1,6 @@
-package io.github.xshoji.javasamplebox.springbatchsimplejob.tasklet;
+package io.github.xshoji.springbatchsimplejob.tasklet;
 
-import io.github.xshoji.javasamplebox.springbatchsimplejob.SpringBatchApplication;
+import io.github.xshoji.springbatchsimplejob.SpringBatchApplication;
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
@@ -50,21 +50,12 @@ public class ListJobNamesTasklet implements Tasklet {
         JarFile jarFile = new JarFile(jarPath);
         Collections.list(jarFile.entries()).stream()
                 .filter(f -> f.toString().matches("BOOT-INF/classes/.*Job.class"))
-                .map(f -> f.toString().replaceAll("BOOT-INF/classes/io/github/xshoji/javasamplebox/springbatchsimplejob/jobs/", " - "))
+                .map(f -> f.toString().replaceAll("BOOT-INF/classes/io/github/xshoji/springbatchsimplejob/jobs/", " - "))
                 .map(f -> f.toString().replaceAll(".class", ""))
                 .collect(Collectors.toList())
                 .forEach(s -> System.out.println(s));
 
         System.out.println("");
         return RepeatStatus.FINISHED;
-    }
-
-    public Path getApplicationPath(Class<?> cls) throws URISyntaxException {
-        ProtectionDomain pd = cls.getProtectionDomain();
-        CodeSource cs = pd.getCodeSource();
-        URL location = cs.getLocation();
-        URI uri = location.toURI();
-        Path path = Paths.get(uri);
-        return path;
     }
 }

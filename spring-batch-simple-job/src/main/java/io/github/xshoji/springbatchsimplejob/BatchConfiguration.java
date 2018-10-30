@@ -1,4 +1,4 @@
-package io.github.xshoji.javasamplebox.springbatchsimplejob;
+package io.github.xshoji.springbatchsimplejob;
 
 import org.springframework.batch.core.configuration.annotation.DefaultBatchConfigurer;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
