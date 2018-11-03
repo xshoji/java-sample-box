@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package io.github.xshoji.springbootgrpc.service.usermessage;
+
+// The calc service
+service UserMessageService {
+  // get
+  rpc Get (GetUserMessageRequest) returns (UserMessageResponse);
+  // add
+  rpc Add (AddUserMessageRequest) returns (UserMessageResponse);
+}
+
+message UserMessage {
+  string name = 1;
+  string message = 2;
+  int32 age = 3;
+}
+//message UserMessage {
+//  required string name = 1;
+//  optional string message = 2;
+//  optional int32 age = 3;
+//}
+// > protocol buffers - Can I define a grpc call with a null request or response? - Stack Overflow
+// > https://stackoverflow.com/questions/31768665/can-i-define-a-grpc-call-with-a-null-request-or-response
+message GetUserMessageRequest {
+  string name = 1;
+}
+message AddUserMessageRequest {
+  UserMessage message = 1;
+}
+message UserMessageResponse {
+  repeated UserMessage message = 1;
+}
