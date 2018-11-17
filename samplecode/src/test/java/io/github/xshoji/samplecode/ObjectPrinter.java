@@ -2,6 +2,9 @@ package io.github.xshoji.samplecode;
 
 import com.google.gson.GsonBuilder;
 
+import java.util.Collections;
+import java.util.List;
+
 /** Created by xshoji on 2018/11/17. */
 public class ObjectPrinter {
   protected static GsonBuilder builder = new GsonBuilder();
@@ -18,5 +21,8 @@ public class ObjectPrinter {
 
   public static void printIdentityHashCode(Object object) {
     System.out.println(System.identityHashCode(object));
+  }
+  public static void println(Object object) {
+    System.out.println(object);
   }
 }

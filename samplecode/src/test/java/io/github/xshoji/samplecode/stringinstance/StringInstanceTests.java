@@ -16,8 +16,7 @@ public class StringInstanceTests {
     String string4 = new String("aaa");
 
     // > java - printing the address of the string instances - Stack Overflow
-    // >
-    // https://stackoverflow.com/questions/16351555/printing-the-address-of-the-string-instances/35648773
+    // > https://stackoverflow.com/questions/16351555/printing-the-address-of-the-string-instances/35648773
     ObjectPrinter.printIdentityHashCode(string1);
     ObjectPrinter.printIdentityHashCode(string2);
     ObjectPrinter.printIdentityHashCode(string3);
