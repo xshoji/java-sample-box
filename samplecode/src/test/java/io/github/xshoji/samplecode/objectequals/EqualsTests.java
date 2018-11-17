@@ -7,6 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.HashSet;
@@ -17,8 +18,14 @@ import java.util.Set;
 public class EqualsTests {
   @Test
   public void test() throws MalformedURLException {
-    Set<Date> dateSet1 = new HashSet<>();
     long systemCurrentTimeMillis = System.currentTimeMillis();
+
+    Timestamp timestamp = new Timestamp(systemCurrentTimeMillis);
+    Date date = new Date(systemCurrentTimeMillis);
+    ObjectPrinter.println(date.equals(timestamp));
+    ObjectPrinter.println(timestamp.equals(date));
+
+    Set<Date> dateSet1 = new HashSet<>();
     dateSet1.add(new Date(systemCurrentTimeMillis));
     dateSet1.add(new Date(systemCurrentTimeMillis));
     dateSet1.add(new Timestamp(systemCurrentTimeMillis));
