@@ -17,10 +17,10 @@ public class StringInstanceTests {
 
     // > java - printing the address of the string instances - Stack Overflow
     // > https://stackoverflow.com/questions/16351555/printing-the-address-of-the-string-instances/35648773
-    ObjectPrinter.printIdentityHashCode(string1);
-    ObjectPrinter.printIdentityHashCode(string2);
-    ObjectPrinter.printIdentityHashCode(string3);
-    ObjectPrinter.printIdentityHashCode(string4);
+    ObjectPrinter.printlnIdentityHashCode(string1);
+    ObjectPrinter.printlnIdentityHashCode(string2);
+    ObjectPrinter.printlnIdentityHashCode(string3);
+    ObjectPrinter.printlnIdentityHashCode(string4);
     assert string1 == string2;
     assert string1 != string3;
     assert string3 != string4;

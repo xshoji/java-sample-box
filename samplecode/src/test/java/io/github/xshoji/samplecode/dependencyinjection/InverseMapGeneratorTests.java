@@ -20,8 +20,8 @@ public class InverseMapGeneratorTests {
               map.put("name3", 3);
               return map;
             });
-    ObjectPrinter.printAsJsonString(mapInverser.getOriginalMap());
-    ObjectPrinter.printAsJsonString(mapInverser.getInversedMap());
+    ObjectPrinter.printlnAsJsonString(mapInverser.getOriginalMap());
+    ObjectPrinter.printlnAsJsonString(mapInverser.getInversedMap());
     assert true;
   }
 }

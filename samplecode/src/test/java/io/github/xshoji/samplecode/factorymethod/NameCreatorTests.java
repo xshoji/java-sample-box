@@ -16,8 +16,8 @@ public class NameCreatorTests {
     // NormalName name = new NormalName();
     PrivateName name3 = NameCreator.normalName("test", 10);
     PrivateName name4 = NameCreator.emptyName();
-    ObjectPrinter.printAsJsonString(name3);
-    ObjectPrinter.printAsJsonString(name4);
+    ObjectPrinter.printlnAsJsonString(name3);
+    ObjectPrinter.printlnAsJsonString(name4);
     assert true;
   }
 }

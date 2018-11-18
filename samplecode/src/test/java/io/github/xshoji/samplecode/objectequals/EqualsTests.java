@@ -7,7 +7,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.HashSet;
@@ -30,7 +29,7 @@ public class EqualsTests {
     dateSet1.add(new Date(systemCurrentTimeMillis));
     dateSet1.add(new Timestamp(systemCurrentTimeMillis));
     dateSet1.add(new Timestamp(systemCurrentTimeMillis));
-    ObjectPrinter.printAsJsonString(dateSet1);
+    ObjectPrinter.printlnAsJsonString(dateSet1);
     ObjectPrinter.println(dateSet1.size());
 
     Set<Date> dateSet2 = new HashSet<>();
@@ -38,7 +37,7 @@ public class EqualsTests {
     dateSet2.add(new Timestamp(systemCurrentTimeMillis));
     dateSet2.add(new Date(systemCurrentTimeMillis));
     dateSet2.add(new Date(systemCurrentTimeMillis));
-    ObjectPrinter.printAsJsonString(dateSet2);
+    ObjectPrinter.printlnAsJsonString(dateSet2);
     ObjectPrinter.println(dateSet2.size());
 
     // > URLStreamHandler (Java Platform SE 8 )
@@ -50,7 +49,7 @@ public class EqualsTests {
     urlSet.add(new URL("https://www.google.co.jp"));
     urlSet.add(new URL("https://www.facebook.com"));
     urlSet.add(new URL("https://www.twitter.com"));
-    ObjectPrinter.printAsJsonString(urlSet);
+    ObjectPrinter.printlnAsJsonString(urlSet);
     ObjectPrinter.println(urlSet.size());
     assert true;
   }

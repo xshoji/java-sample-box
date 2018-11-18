@@ -14,20 +14,20 @@ public class NameTests {
   public void test() {
     Name name1 = new Name("test", 10);
     Name name2 = new Name(10, "name");
-    ObjectPrinter.printAsJsonString(name1);
-    ObjectPrinter.printAsJsonString(name2);
+    ObjectPrinter.printlnAsJsonString(name1);
+    ObjectPrinter.printlnAsJsonString(name2);
 
     name1 = Name.createName("test", 10);
     name2 = Name.createEmptyName();
-    ObjectPrinter.printAsJsonString(name1);
-    ObjectPrinter.printAsJsonString(name2);
+    ObjectPrinter.printlnAsJsonString(name1);
+    ObjectPrinter.printlnAsJsonString(name2);
 
     // Cannot create directly
     // NormalName name = new NormalName();
     PrivateName name3 = NameCreator.normalName("test", 10);
     PrivateName name4 = NameCreator.emptyName();
-    ObjectPrinter.printAsJsonString(name3);
-    ObjectPrinter.printAsJsonString(name4);
+    ObjectPrinter.printlnAsJsonString(name3);
+    ObjectPrinter.printlnAsJsonString(name4);
     assert true;
   }
 }

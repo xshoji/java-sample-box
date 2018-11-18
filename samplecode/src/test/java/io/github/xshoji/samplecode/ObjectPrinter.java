@@ -8,11 +8,11 @@ public class ObjectPrinter {
 
   private ObjectPrinter() {}
 
-  public static void printAsJsonString(Object object) {
+  public static void printlnAsJsonString(Object object) {
     System.out.println(builder.create().toJson(object));
   }
 
-  public static void printIdentityHashCode(Object object) {
+  public static void printlnIdentityHashCode(Object object) {
     System.out.println(System.identityHashCode(object));
   }
   public static void println(Object object) {
