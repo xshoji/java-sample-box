@@ -2,12 +2,9 @@ package io.github.xshoji.samplecode.dependencyinjection;
 
 import io.github.xshoji.samplecode.ObjectPrinter;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.HashMap;
 
-@RunWith(SpringRunner.class)
 public class InverseMapGeneratorTests {
   @Test
   public void test() {

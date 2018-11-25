@@ -1,8 +1,6 @@
 package io.github.xshoji.samplecode.objecthashcode;
 
-/**
- * Created by xshoji on 2018/11/18.
- */
+/** Created by xshoji on 2018/11/18. */
 public class Apple {
 
   protected Integer weight;

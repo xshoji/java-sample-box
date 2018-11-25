@@ -15,6 +15,7 @@ public class ObjectPrinter {
   public static void printlnIdentityHashCode(Object object) {
     System.out.println(System.identityHashCode(object));
   }
+
   public static void println(Object object) {
     System.out.println(object);
   }

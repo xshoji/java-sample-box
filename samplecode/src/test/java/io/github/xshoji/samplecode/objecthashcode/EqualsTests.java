@@ -2,13 +2,11 @@ package io.github.xshoji.samplecode.objecthashcode;
 
 import io.github.xshoji.samplecode.ObjectPrinter;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /** Created by xshoji on 2018/11/17. */
-@RunWith(SpringRunner.class)
 public class EqualsTests {
   @Test
   public void test() {

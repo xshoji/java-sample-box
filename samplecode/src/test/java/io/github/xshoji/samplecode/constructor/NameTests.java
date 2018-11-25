@@ -4,10 +4,7 @@ import io.github.xshoji.samplecode.ObjectPrinter;
 import io.github.xshoji.samplecode.factorymethod.packageprivate.NameCreator;
 import io.github.xshoji.samplecode.factorymethod.packageprivate.PrivateName;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
 public class NameTests {
 
   @Test

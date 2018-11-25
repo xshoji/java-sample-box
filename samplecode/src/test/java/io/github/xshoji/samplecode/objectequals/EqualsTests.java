@@ -2,8 +2,6 @@ package io.github.xshoji.samplecode.objectequals;
 
 import io.github.xshoji.samplecode.ObjectPrinter;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -13,7 +11,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 /** Created by xshoji on 2018/11/17. */
-@RunWith(SpringRunner.class)
 public class EqualsTests {
   @Test
   public void test() throws MalformedURLException {
@@ -41,9 +38,11 @@ public class EqualsTests {
     ObjectPrinter.println(dateSet2.size());
 
     // > URLStreamHandler (Java Platform SE 8 )
-    // > https://docs.oracle.com/javase/jp/8/docs/api/java/net/URLStreamHandler.html#hostsEqual-java.net.URL-java.net.URL-
+    // >
+    // https://docs.oracle.com/javase/jp/8/docs/api/java/net/URLStreamHandler.html#hostsEqual-java.net.URL-java.net.URL-
     // > URLStreamHandler (Java Platform SE 8 )
-    // > https://docs.oracle.com/javase/jp/8/docs/api/java/net/URLStreamHandler.html#getHostAddress-java.net.URL-
+    // >
+    // https://docs.oracle.com/javase/jp/8/docs/api/java/net/URLStreamHandler.html#getHostAddress-java.net.URL-
     Set<URL> urlSet = new HashSet<>();
     urlSet.add(new URL("https://www.yahoo.co.jp"));
     urlSet.add(new URL("https://www.google.co.jp"));

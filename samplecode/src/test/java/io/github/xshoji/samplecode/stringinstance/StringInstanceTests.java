@@ -2,10 +2,7 @@ package io.github.xshoji.samplecode.stringinstance;
 
 import io.github.xshoji.samplecode.ObjectPrinter;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
 public class StringInstanceTests {
 
   @Test
@@ -16,7 +13,8 @@ public class StringInstanceTests {
     String string4 = new String("aaa");
 
     // > java - printing the address of the string instances - Stack Overflow
-    // > https://stackoverflow.com/questions/16351555/printing-the-address-of-the-string-instances/35648773
+    // >
+    // https://stackoverflow.com/questions/16351555/printing-the-address-of-the-string-instances/35648773
     ObjectPrinter.printlnIdentityHashCode(string1);
     ObjectPrinter.printlnIdentityHashCode(string2);
     ObjectPrinter.printlnIdentityHashCode(string3);
