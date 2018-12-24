@@ -1,6 +1,6 @@
 package io.github.xshoji.samplecode.builderpattern;
 
-public class User {
+public class UserRequired {
   private String name;
   private String nickname;
   private String states;
@@ -8,8 +8,8 @@ public class User {
   private Boolean isStudent;
   private Boolean isMarried;
   // 直接new禁止
-  private User(Builder b) {
-    name = b.name; nickname = b.nickname; states = b.states; city = b.city; isStudent = b.isStudent; isMarried = b.isMarried;
+  private UserRequired(String name, String nickname, String states, String city, Boolean isStudent, Boolean isMarried) {
+    this.name = name; this.nickname = nickname; this.states = states; this.city = city; this.isStudent = isStudent; this.isMarried = isMarried;
   }
   public String getName()     { return name; }
   public String getNickname() { return nickname; }
@@ -25,16 +25,19 @@ public class User {
     private Boolean isStudent;
     private Boolean isMarried;
     private Builder() {}
-    public static Builder builder() { return new Builder(); }
-    public Builder setName(String name)            { this.name = name;           return this; }
-    public Builder setNickname(String nickname)    { this.nickname = nickname;   return this; }
+    public static Builder builder(String name, String nickname, Boolean isStudent) {
+      Builder builder = new Builder();
+      builder.name = name;
+      builder.nickname = nickname;
+      builder.isStudent = isStudent;
+      return builder;
+    }
     public Builder setStates(String states)        { this.states = states;       return this; }
     public Builder setCity(String city)            { this.city = city;           return this; }
-    public Builder setIsStudent(Boolean isStudent) { this.isStudent = isStudent; return this; }
     public Builder setIsMarried(Boolean isMarried) { this.isMarried = isMarried; return this; }
-    public User build() {
+    public UserRequired build() {
       // 必要に応じてここで状態の整合性チェック
-      return new User(this);
+      return new UserRequired(this.name, this.nickname, this.states, this.city, this.isStudent, this.isMarried);
     }
   }
 }

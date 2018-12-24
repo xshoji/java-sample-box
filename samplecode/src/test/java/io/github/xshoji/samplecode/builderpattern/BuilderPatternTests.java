@@ -53,5 +53,57 @@ public class BuilderPatternTests {
             .setWeightGram(300.0)
             .build();
     ObjectPrinter.printlnAsJsonString(grape6);
+
+    User user = User.Builder.builder()
+            .setName("John")
+            .setNickname("JJ")
+            .setStates("AAA")
+            .setCity("BBB")
+            .setIsStudent(true)
+            .setIsMarried(false)
+            .build();
+    user.getName();
+    user.getNickname();
+    user.getStates();
+    user.getCity();
+    user.isStudent();
+    user.isMarried();
+
+    UserRequired user2 = UserRequired.Builder
+            .builder("John", "JJ", true)
+            .setCity("aaa")
+            .setStates("AAA")
+            .setIsMarried(false)
+            .build();
+
+    UserStep user3 = UserStep.Builder.builder()
+            .setName("")
+            .setNickname("")
+            .setStates("")
+            .setCity("")
+            .setIsStudent(true)
+            .setIsMarried(true)
+            .build();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
 }
