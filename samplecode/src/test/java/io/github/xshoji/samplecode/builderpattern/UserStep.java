@@ -36,7 +36,6 @@ public class UserStep {
     public IsMarriedSetter setIsStudent(Boolean isStudent) { provisionalUser.isStudent = isStudent; return this; }
     public Builder setIsMarried(Boolean isMarried)         { provisionalUser.isMarried = isMarried; return this; }
     public UserStep build() {
-      // 必要に応じてここで状態の整合性チェック
       UserStep user = new UserStep();
       user.name = provisionalUser.name;
       user.nickname = provisionalUser.nickname;
