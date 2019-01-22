@@ -8,9 +8,7 @@ public class UserStep {
   private Boolean isStudent;
   private Boolean isMarried;
   // 直接new禁止
-  private UserStep(Builder b) {
-    name = b.name; nickname = b.nickname; states = b.states; city = b.city; isStudent = b.isStudent; isMarried = b.isMarried;
-  }
+  private UserStep() {}
   public String getName()     { return name; }
   public String getNickname() { return nickname; }
   public String getStates()   { return states; }
@@ -24,23 +22,30 @@ public class UserStep {
   public interface IsStudentSetter { IsMarriedSetter setIsStudent(Boolean isStudent); }
   public interface IsMarriedSetter { Builder setIsMarried(Boolean isStudent); }
   public static class Builder implements NameSetter,NicknameSetter,StatesSetter,CitySetter,IsStudentSetter,IsMarriedSetter {
-    private String name;
-    private String nickname;
-    private String states;
-    private String city;
-    private Boolean isStudent;
-    private Boolean isMarried;
+    private UserStep provisionalUser;
     private Builder() {}
-    public static NameSetter builder()                     { return new Builder(); }
-    public NicknameSetter setName(String name)             { this.name = name;           return this; }
-    public StatesSetter setNickname(String nickname)       { this.nickname = nickname;   return this; }
-    public CitySetter setStates(String states)             { this.states = states;       return this; }
-    public IsStudentSetter setCity(String city)            { this.city = city;           return this; }
-    public IsMarriedSetter setIsStudent(Boolean isStudent) { this.isStudent = isStudent; return this; }
-    public Builder setIsMarried(Boolean isMarried)         { this.isMarried = isMarried; return this; }
+    public static NameSetter builder() {
+      Builder builder = new Builder();
+      builder.provisionalUser = new UserStep();
+      return builder;
+    }
+    public NicknameSetter setName(String name)             { provisionalUser.name = name;           return this; }
+    public StatesSetter setNickname(String nickname)       { provisionalUser.nickname = nickname;   return this; }
+    public CitySetter setStates(String states)             { provisionalUser.states = states;       return this; }
+    public IsStudentSetter setCity(String city)            { provisionalUser.city = city;           return this; }
+    public IsMarriedSetter setIsStudent(Boolean isStudent) { provisionalUser.isStudent = isStudent; return this; }
+    public Builder setIsMarried(Boolean isMarried)         { provisionalUser.isMarried = isMarried; return this; }
     public UserStep build() {
       // 必要に応じてここで状態の整合性チェック
-      return new UserStep(this);
+      UserStep user = new UserStep();
+      user.name = provisionalUser.name;
+      user.nickname = provisionalUser.nickname;
+      user.states = provisionalUser.states;
+      user.city = provisionalUser.city;
+      user.isStudent = provisionalUser.isStudent;
+      user.isMarried = provisionalUser.isMarried;
+      // 必要に応じてここで状態の整合性チェック
+      return user;
     }
   }
 }

@@ -68,6 +68,7 @@ public class BuilderPatternTests {
     user.getCity();
     user.isStudent();
     user.isMarried();
+    ObjectPrinter.printlnAsJsonString(user);
 
     UserRequired user2 = UserRequired.Builder
             .builder("John", "JJ", true)
@@ -75,35 +76,17 @@ public class BuilderPatternTests {
             .setStates("AAA")
             .setIsMarried(false)
             .build();
+    ObjectPrinter.printlnAsJsonString(user2);
 
     UserStep user3 = UserStep.Builder.builder()
-            .setName("")
-            .setNickname("")
-            .setStates("")
-            .setCity("")
+            .setName("AAA")
+            .setNickname("BBB")
+            .setStates("CCC")
+            .setCity("DDD")
             .setIsStudent(true)
             .setIsMarried(true)
             .build();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ObjectPrinter.printlnAsJsonString(user3);
 
   }
 }
