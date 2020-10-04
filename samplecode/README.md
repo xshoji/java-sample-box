@@ -21,6 +21,15 @@ Java sample code work space.
 > Effective Java の Builderパターンとその拡張 - がくぞーのメモ  
 > http://d.hatena.ne.jp/gakuzo/20090708/1247062344
 
+
+## Spock
+
+> Spock Framework Reference Documentation  
+> http://spockframework.org/spock/docs/1.3/all_in_one.html
+
+> spock-workshop/02_basics.md at master · yamkazu/spock-workshop  
+> https://github.com/yamkazu/spock-workshop/blob/master/docs/02_basics.md#setup
+
 ## Reference
 
 > Spring Boot Test ignores logging.level - Stack Overflow  
