@@ -8,7 +8,7 @@ spring:
     console:
       enabled: true
 spring.jpa:
-    hibernate.ddl-auto: update
+  hibernate.ddl-auto: update
 # References
 # - [H2 database example using hibernate and Spring Boot - My Cute Blog](http://mycuteblog.com/h2-database-example-hibernate-spring-boot/)
 # - [Spring Boot お勉強　その３　～H2DBの永続化～ - yosshio0426's blog](http://yosshio0426.hatenadiary.com/entry/2014/07/21/070153)

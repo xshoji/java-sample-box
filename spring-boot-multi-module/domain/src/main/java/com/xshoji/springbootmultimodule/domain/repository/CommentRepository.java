@@ -1,4 +1,4 @@
-package io.github.xshoji.springbootmultimodule.domain.repository;
+package com.xshoji.springbootmultimodule.domain.repository;
 
 import java.util.List;
 
@@ -6,6 +6,7 @@ import java.util.List;
  * - [SpringDataJPA · hyukke/HelloWorldTS Wiki](https://github.com/hyukke/HelloWorldTS/wiki/SpringDataJPA)
  */
 public interface CommentRepository {
-    void add(String userName, String comment);
-    List<String> get(String userName);
+  void add(String userName, String comment);
+
+  List<String> get(String userName);
 }

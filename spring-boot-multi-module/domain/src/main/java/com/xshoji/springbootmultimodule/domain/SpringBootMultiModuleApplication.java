@@ -1,11 +1,11 @@
-package io.github.xshoji.springbootmultimodule.domain;
+package com.xshoji.springbootmultimodule.domain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SpringBootMultiModuleApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootMultiModuleApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(SpringBootMultiModuleApplication.class, args);
+  }
 }
