@@ -1,23 +1,18 @@
 
-```
-$ pwd
-/.../java-sample-box/javagroovykt
-```
-
 ## groovy
 
 ```
-$ groovy src/groovy/sample/SampleGroovy.groovy
+$ groovy src/groovy/com/xshoji/SampleGroovy.groovy
 ```
 
 ## java
 
 ```
 $ mkdir -p target/classes
-$ kotlinc src/kotlin/sample/VoKotlin.kt -d target/classes/
-$ javac -classpath ~/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.2.31/kotlin-stdlib-1.2.31.jar:~/.m2/repository/org/jetbrains/kotlin/kotlin-compiler/1.2.31/kotlin-compiler-1.2.31.jar:target/classes -d target src/java/sample/SampleJava.java
-$ java -classpath ~/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.2.31/kotlin-stdlib-1.2.31.jar:~/.m2/repository/org/jetbrains/kotlin/kotlin-compiler/1.2.31/kotlin-compiler-1.2.31.jar:target/classes:target SampleJava
-naoくん
+$ kotlinc src/kotlin/com/xshoji/VoKotlin.kt -d target/classes/
+$ javac -classpath ~/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.jar:~/.m2/repository/org/jetbrains/kotlin/kotlin-compiler/1.4.10/kotlin-compiler-1.4.10.jar:target/classes -d target src/java/com/xshoji/SampleJava.java
+$ java -classpath ~/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.jar:~/.m2/repository/org/jetbrains/kotlin/kotlin-compiler/1.4.10/kotlin-compiler-1.4.10.jar:target/classes:target SampleJava
+taroくん
 10
 ```
 
@@ -27,8 +22,10 @@ naoくん
 
 ```
 $ mkdir target
-$ kotlinc-jvm src/kotlin/sample/VoKotlin.kt src/kotlin/sample/SampleKotlin.kt -include-runtime -d target/SampleKotlin.jar
+$ kotlinc-jvm src/kotlin/com/xshoji/VoKotlin.kt src/kotlin/com/xshoji/SampleKotlin.kt -include-runtime -d target/SampleKotlin.jar
 $ java -cp $KOTLIN_HOME/lib/kotlin-runtime.jar -jar target/SampleKotlin.jar
+print args
+[Ljava.lang.String;@60215eee
 hello world
 taroくん
 31
