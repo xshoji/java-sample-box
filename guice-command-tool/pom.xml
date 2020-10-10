@@ -14,6 +14,9 @@
   <!-- ■　main/resourcesの各種xmlファイルに注入するプロパティ値 -->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- Dependency package versions -->
+    <jackson.version>2.11.3</jackson.version>
   </properties>
   <profiles>
     <profile>
@@ -31,9 +34,7 @@
         <hibernate.connection.url>jdbc:oracle:thin:@localhost:11521:xe</hibernate.connection.url>
         <hibernate.connection.username>system</hibernate.connection.username>
         <hibernate.connection.password>oracle</hibernate.connection.password>
-        
-        <!-- Dependency package versions -->
-        <jackson.version>2.11.3</jackson.version>
+
       </properties>
     </profile>
   </profiles>
