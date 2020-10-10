@@ -3,7 +3,7 @@
 
   <!-- ■　プロジェクト設定 -->
   <modelVersion>4.0.0</modelVersion>
-  <groupId>io.github.xshoji</groupId>
+  <groupId>com.xshoji</groupId>
   <artifactId>guice-command-tool</artifactId>
   <packaging>jar</packaging>
   <version>0.0.1</version>
@@ -31,15 +31,17 @@
         <hibernate.connection.url>jdbc:oracle:thin:@localhost:11521:xe</hibernate.connection.url>
         <hibernate.connection.username>system</hibernate.connection.username>
         <hibernate.connection.password>oracle</hibernate.connection.password>
+        
+        <!-- Dependency package versions -->
+        <jackson.version>2.11.3</jackson.version>
       </properties>
     </profile>
   </profiles>
 
 
-
   <build>
 
-    <!-- ■　入出力の設定 -->
+    <!-- ■ 入出力の設定 -->
     <!-- <finalName>console</finalName> -->
     <resources>
       <resource>
@@ -85,7 +87,7 @@
           </descriptors>
           <archive>
             <manifest>
-              <mainClass>io.github.xshoji.guicecommandtool.App</mainClass>
+              <mainClass>com.xshoji.guicecommandtool.App</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -112,7 +114,6 @@
 
     </plugins>
   </build>
-
 
 
   <dependencies>
@@ -172,23 +173,17 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
-      <version>2.8.3</version>
+      <version>${jackson.version}</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
-      <version>2.8.3</version>
+      <version>${jackson.version}</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.9.10.4</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>jackson-annotations</artifactId>
-          <groupId>com.fasterxml.jackson.core</groupId>
-        </exclusion>
-      </exclusions>
+      <version>${jackson.version}</version>
     </dependency>
 
 
@@ -208,11 +203,13 @@
     </dependency>
 
     <!-- MavenプロジェクトでOracleのJDBCドライバを使いたい - 覚えたら書く http://blog.y-yuki.net/entry/2016/11/24/000000 -->
+    <!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc10 -->
     <dependency>
-      <groupId>com.oracle.jdbc</groupId>
-      <artifactId>ojdbc6</artifactId>
-      <version>11.2.0.4</version>
+      <groupId>com.oracle.database.jdbc</groupId>
+      <artifactId>ojdbc10</artifactId>
+      <version>19.7.0.0</version>
     </dependency>
+
 
     <!-- java - Can you find all classes in a package using reflection? - Stack Overflow https://stackoverflow.com/questions/520328/can-you-find-all-classes-in-a-package-using-reflection -->
     <!-- 特定のアノテーションが付与されたクラスを実行時に抽出したい - 覚えたら書く http://blog.y-yuki.net/entry/2017/01/31/124000 -->

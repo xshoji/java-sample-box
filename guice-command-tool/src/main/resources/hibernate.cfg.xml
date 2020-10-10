@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
-        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
-    <session-factory>
-        <!-- ドライバ -->
-        <property name="connection.driver_class">${hibernate.connection.driver_class}</property>
-        <!-- 接続情報 -->
-        <property name="connection.url">${hibernate.connection.url}</property>
-        <property name="connection.username">${hibernate.connection.username}</property>
-        <property name="connection.password">${hibernate.connection.password}</property>
-        <!-- 各種設定 -->
-        <property name="hibernate.c3p0.max_size">20</property>
-        <property name="hibernate.c3p0.min_size">1</property>
-        <property name="hibernate.c3p0.timeout">5000</property>
-        <!-- プール内最大Statement -->
-        <property name="hibernate.c3p0.max_statements">100</property>
-        <property name="hibernate.c3p0.idle_test_period">3000</property>
-        <property name="hibernate.c3p0.acquire_increment">2</property>
+  <session-factory>
+    <!-- ドライバ -->
+    <property name="connection.driver_class">${hibernate.connection.driver_class}</property>
+    <!-- 接続情報 -->
+    <property name="connection.url">${hibernate.connection.url}</property>
+    <property name="connection.username">${hibernate.connection.username}</property>
+    <property name="connection.password">${hibernate.connection.password}</property>
+    <!-- 各種設定 -->
+    <property name="hibernate.c3p0.max_size">20</property>
+    <property name="hibernate.c3p0.min_size">1</property>
+    <property name="hibernate.c3p0.timeout">5000</property>
+    <!-- プール内最大Statement -->
+    <property name="hibernate.c3p0.max_statements">100</property>
+    <property name="hibernate.c3p0.idle_test_period">3000</property>
+    <property name="hibernate.c3p0.acquire_increment">2</property>
 
-        <property name="hibernate.c3p0.validate">true</property>
-        <!-- DB方言解消 -->
-        <property name="dialect">org.hibernate.dialect.Oracle12cDialect</property>
-        <!-- 必要に応じて表生成？ -->
-        <property name="hbm2ddl.auto">none</property>
-        <!-- 生成SQL表示 -->
-        <property name="show_sql">none</property>
-        <property name="hibernate.format_sql">none</property>
+    <property name="hibernate.c3p0.validate">true</property>
+    <!-- DB方言解消 -->
+    <property name="dialect">org.hibernate.dialect.Oracle12cDialect</property>
+    <!-- 必要に応じて表生成？ -->
+    <property name="hbm2ddl.auto">none</property>
+    <!-- 生成SQL表示 -->
+    <property name="show_sql">none</property>
+    <property name="hibernate.format_sql">none</property>
 
-        <!-- マッピングテーブル -->
-        <!-- java - Hibernate-Unable to load class declared in Hibernate configuration </mapping> entry - Stack Overflow https://stackoverflow.com/questions/29721856/hibernate-unable-to-load-class-declared-in-hibernate-configuration-mapping-en  -->
-        <mapping class="io.github.xshoji.guicecommandtool.entity.Person"/>
-    </session-factory>
+    <!-- マッピングテーブル -->
+    <!-- java - Hibernate-Unable to load class declared in Hibernate configuration </mapping> entry - Stack Overflow https://stackoverflow.com/questions/29721856/hibernate-unable-to-load-class-declared-in-hibernate-configuration-mapping-en  -->
+    <mapping class="com.xshoji.guicecommandtool.entity.Person"/>
+  </session-factory>
 </hibernate-configuration>

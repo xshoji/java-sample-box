@@ -1,29 +1,29 @@
 <configuration>
-    <property name="LOG_DIR" value="${logback.log.dir}" />
-    <property name="LOG_NAME" value="${logback.log.name}" />
+  <property name="LOG_DIR" value="${logback.log.dir}"/>
+  <property name="LOG_NAME" value="${logback.log.name}"/>
 
-    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_DIR}/${LOG_NAME}.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- daily rollover  -->
-            <fileNamePattern>${LOG_DIR}/myapp.%d{yyyy-MM-dd}.log</fileNamePattern>
+  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${LOG_DIR}/${LOG_NAME}.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- daily rollover  -->
+      <fileNamePattern>${LOG_DIR}/myapp.%d{yyyy-MM-dd}.log</fileNamePattern>
 
-            <!-- keep 30 days' worth of history -->
-            <maxHistory>30</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
-        </encoder>
-    </appender>
+      <!-- keep 30 days' worth of history -->
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+    </encoder>
+  </appender>
 
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%msg%n</pattern>
-        </encoder>
-    </appender>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%msg%n</pattern>
+    </encoder>
+  </appender>
 
-    <root level="info">
-        <appender-ref ref="FILE" />
-        <!-- <appender-ref ref="STDOUT" /> -->
-    </root>
+  <root level="info">
+    <appender-ref ref="FILE"/>
+    <!-- <appender-ref ref="STDOUT" /> -->
+  </root>
 </configuration>
