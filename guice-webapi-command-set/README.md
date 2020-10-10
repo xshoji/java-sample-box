@@ -22,21 +22,21 @@ git version 2.9.3 (Apple Git-75)
 
 ```
 # Build
-$ cd docker
-$ docker-compose up -d
-$ cd ..
-$ mvn package
+cd docker
+docker-compose up -d
+cd ..
+mvn package
 
 # Start application
-$ mvn tomcat7:run
+mvn tomcat7:run
 
 # Call webapi
-$ curl -H "Content-Type: application/json" localhost:8080/guice-webapi-command-set/hello/call?name=taro; echo
-$ curl -H "Content-Type: application/json" localhost:8080/guice-webapi-command-set/hello/calc?x=1\&y=2; echo
+curl -H "Content-Type: application/json" localhost:8080/guice-webapi-command-set/hello/call?name=taro; echo
+curl -H "Content-Type: application/json" localhost:8080/guice-webapi-command-set/hello/calc?x=1\&y=2; echo
 
 # Execute cli tool
-$ java -jar target/guice-webapi-command-set-cli.jar test call name
-$ java -jar target/guice-webapi-command-set-cli.jar test sum 1 2
+java -jar target/guice-webapi-command-set-cli.jar test call name
+java -jar target/guice-webapi-command-set-cli.jar test sum 1 2
 ```
 
 

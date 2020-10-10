@@ -23,8 +23,8 @@ java -jar -Dspring.profiles.active=hsqldb webapi/target/spring-boot-embedded-db-
 
 ```
 // Add
-$ curl -H "Content-Type: application/json" localhost:8080/comment/{message}?loopCount=10 |jq
+curl -H "Content-Type: application/json" localhost:8080/comment/{message}?loopCount=10 |jq
 
 // Get
-$ curl -H "Content-Type: application/json" localhost:8080/comment/?limit=10 |jq
+curl -H "Content-Type: application/json" localhost:8080/comment/?limit=10 |jq
 ```

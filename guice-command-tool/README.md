@@ -48,10 +48,10 @@ Groovy Version: 2.4.9 JVM: 1.8.0_131 Vendor: Oracle Corporation OS: Mac OS X
 
 ```
 // Build as "dev" environment
-$ mvn clean package -Pdev
-$ java -jar target/guice-command-tool-0.0.1-make.jar
-$ java -jar target/guice-command-tool-0.0.1-make.jar CallWebApiCommand -h
-$ java -jar target/guice-command-tool-0.0.1-make.jar CallWebApiCommand -title Taro
+mvn clean package -Pdev
+java -jar target/guice-command-tool-0.0.1-make.jar
+java -jar target/guice-command-tool-0.0.1-make.jar CallWebApiCommand -h
+java -jar target/guice-command-tool-0.0.1-make.jar CallWebApiCommand -title Taro
 ```
 
 ### Build and Run without test
