@@ -1,4 +1,4 @@
-package io.github.xshoji.springbootembeddeddb.domain.entity;
+package com.xshoji.springbootembeddeddb.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

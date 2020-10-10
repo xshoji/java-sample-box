@@ -1,4 +1,4 @@
-package io.github.xshoji.springbootembeddeddb.domain;
+package com.xshoji.springbootembeddeddb.domain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

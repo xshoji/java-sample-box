@@ -1,8 +1,8 @@
-package io.github.xshoji.springbootembeddeddb.domain.entity;//package com.example.demo.common.entity;
+package com.xshoji.springbootembeddeddb.domain.entity;//package com.example.demo.common.entity;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.xshoji.springbootembeddeddb.domain.repository.CommentRepository;
+import com.xshoji.springbootembeddeddb.domain.repository.CommentRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

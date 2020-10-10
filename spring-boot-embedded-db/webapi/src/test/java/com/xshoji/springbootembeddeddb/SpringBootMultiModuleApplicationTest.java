@@ -1,4 +1,4 @@
-package io.github.xshoji.springbootembeddeddb;
+package com.xshoji.springbootembeddeddb;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

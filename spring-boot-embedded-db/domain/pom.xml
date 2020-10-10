@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>io.github.xshoji</groupId>
+		<groupId>com.xshoji</groupId>
 		<artifactId>spring-boot-embedded-db</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>

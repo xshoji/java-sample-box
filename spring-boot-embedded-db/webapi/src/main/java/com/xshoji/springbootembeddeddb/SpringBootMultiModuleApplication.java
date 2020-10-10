@@ -1,9 +1,9 @@
-package io.github.xshoji.springbootembeddeddb;
+package com.xshoji.springbootembeddeddb;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.xshoji.springbootembeddeddb.domain.entity.Comment;
-import io.github.xshoji.springbootembeddeddb.domain.repository.CommentRepository;
+import com.xshoji.springbootembeddeddb.domain.entity.Comment;
+import com.xshoji.springbootembeddeddb.domain.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -70,6 +70,6 @@ public class SpringBootMultiModuleApplication {
             comment = commentRepository.saveAndFlush(comment);
             lastId = comment.getId();
         }
-        return commentRepository.findOne(lastId);
+        return commentRepository.getOne(lastId);
     }
 }
