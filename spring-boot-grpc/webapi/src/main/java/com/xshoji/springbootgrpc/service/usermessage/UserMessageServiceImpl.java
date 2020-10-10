@@ -1,7 +1,7 @@
-package io.github.xshoji.springbootgrpc.service.usermessage;
+package com.xshoji.springbootgrpc.service.usermessage;
 
 import io.grpc.stub.StreamObserver;
-import net.devh.springboot.autoconfigure.grpc.server.GrpcService;
+import net.devh.boot.grpc.server.service.GrpcService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

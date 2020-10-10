@@ -1,4 +1,4 @@
-package io.github.xshoji.springbootgrpc.domain;
+package com.xshoji.springbootgrpc.domain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

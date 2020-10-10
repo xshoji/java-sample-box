@@ -1,4 +1,4 @@
-package io.github.xshoji.springbootgrpc.domain.repository;
+package com.xshoji.springbootgrpc.domain.repository;
 
 import org.springframework.stereotype.Component;
 

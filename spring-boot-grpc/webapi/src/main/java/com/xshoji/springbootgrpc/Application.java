@@ -1,4 +1,4 @@
-package io.github.xshoji.springbootgrpc;
+package com.xshoji.springbootgrpc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

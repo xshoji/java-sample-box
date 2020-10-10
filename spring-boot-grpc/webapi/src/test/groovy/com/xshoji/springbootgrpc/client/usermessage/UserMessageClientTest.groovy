@@ -1,7 +1,7 @@
-package io.github.xshoji.springbootgrpc.client.usermessage
+package com.xshoji.springbootgrpc.client.usermessage
 
-import io.github.xshoji.springbootgrpc.Application
-import io.github.xshoji.springbootgrpc.service.usermessage.UserMessage
+import com.xshoji.springbootgrpc.Application
+import com.xshoji.springbootgrpc.service.usermessage.UserMessage
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import spock.lang.Specification

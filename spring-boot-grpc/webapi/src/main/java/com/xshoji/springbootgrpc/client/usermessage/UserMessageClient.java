@@ -1,6 +1,6 @@
-package io.github.xshoji.springbootgrpc.client.usermessage;
+package com.xshoji.springbootgrpc.client.usermessage;
 
-import io.github.xshoji.springbootgrpc.service.usermessage.*;
+import com.xshoji.springbootgrpc.service.usermessage.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import org.springframework.stereotype.Component;

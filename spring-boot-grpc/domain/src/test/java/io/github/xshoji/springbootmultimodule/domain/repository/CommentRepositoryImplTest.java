@@ -1,7 +1,7 @@
 package io.github.xshoji.springbootmultimodule.domain.repository;
 
-import io.github.xshoji.springbootgrpc.domain.Application;
-import io.github.xshoji.springbootgrpc.domain.repository.CommentRepositoryImpl;
+import com.xshoji.springbootgrpc.domain.Application;
+import com.xshoji.springbootgrpc.domain.repository.CommentRepositoryImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

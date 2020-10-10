@@ -1,4 +1,4 @@
-package io.github.xshoji.springbootgrpc;
+package com.xshoji.springbootgrpc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

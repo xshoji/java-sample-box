@@ -13,8 +13,7 @@
 	<packaging>jar</packaging>
 	<name>spring-boot-grpc-webapi</name>
 	<description>Demo project for Spring Boot [webapi] </description>
-
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>io.github.xshoji</groupId>
