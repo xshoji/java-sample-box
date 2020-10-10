@@ -1,4 +1,4 @@
-package io.github.xshoji.springbatch.tasklet;
+package com.xshoji.springbatchsimplejob.tasklet;
 
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
@@ -8,13 +8,12 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class TaskletTemplate implements Tasklet {
-
+public class EchoTasklet implements Tasklet {
   @Override
   public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
     System.out.println("");
-    System.out.println("[ TaskletTemplate ]");
-    System.out.println("This is " + TaskletTemplate.class);
+    System.out.println("[ EchoTasklet ]");
+    System.out.println("This is " + EchoTasklet.class);
 
     System.out.println("");
     return RepeatStatus.FINISHED;

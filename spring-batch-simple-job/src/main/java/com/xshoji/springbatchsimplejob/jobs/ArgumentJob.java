@@ -1,7 +1,6 @@
-package io.github.xshoji.springbatch.jobs;
+package com.xshoji.springbatchsimplejob.jobs;
 
-import com.xshoji.springbatchsimplejob.jobs.JobBase;
-import com.xshoji.springbatchsimplejob.springbatch.tasklet.TaskletTemplate;
+import com.xshoji.springbatchsimplejob.tasklet.ArgumentTasklet;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
@@ -11,22 +10,22 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-public class JobTemplate extends JobBase {
+public class ArgumentJob extends JobBase {
 
   @Autowired
-  private TaskletTemplate tasklet;
+  private ArgumentTasklet tasklet;
 
   @Bean
-  public Job createJobTemplate() {
+  public Job createArgumentJob() {
     return jobBuilderFactory
-            .get("JobTemplate")
+            .get("ArgumentJob")
             .incrementer(new RunIdIncrementer())
-            .start(createJobTemplateStep())
+            .start(createArgumentJobStep())
             .build();
   }
 
   @Bean
-  public Step createJobTemplateStep() {
+  public Step createArgumentJobStep() {
     return stepBuilderFactory.get(getClass() + "Step").tasklet(tasklet).build();
   }
 }
