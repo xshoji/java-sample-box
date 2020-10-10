@@ -1,4 +1,4 @@
-package io.github.xshoji.springbatch.tasklet;
+package com.xshoji.springbatchsimplejob.tasklet;
 
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;

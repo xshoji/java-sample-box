@@ -34,8 +34,8 @@ public class JobCreationTasklet implements Tasklet {
     // Get path (Template files and Destinatin files)
     InputStream originalFileJob = this.getClass().getClassLoader().getResourceAsStream("template/JobTemplate.java");
     InputStream originalFileTasklet = this.getClass().getClassLoader().getResourceAsStream("template/TaskletTemplate.java");
-    Path destinationFileJob = Paths.get("src/main/java/io/github/xshoji/javasamplebox/springbatch/jobs/" + jobName + "Job.java");
-    Path destinationFileTasklet = Paths.get("src/main/java/io/github/xshoji/javasamplebox/springbatch/tasklet/" + jobName + "Tasklet.java");
+    Path destinationFileJob = Paths.get("src/main/java/com/xshoji/springbatchsimplejob/jobs/" + jobName + "Job.java");
+    Path destinationFileTasklet = Paths.get("src/main/java/com/xshoji/springbatchsimplejob/tasklet/" + jobName + "Tasklet.java");
 
     // Copy files
     Files.copy(originalFileJob, destinationFileJob);
