@@ -11,20 +11,20 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 @Component
 public class CommentRepositoryImpl implements CommentRepository {
-    ConcurrentHashMap<String, List<String>> comments;
+  ConcurrentHashMap<String, List<String>> comments;
 
-    public CommentRepositoryImpl() {
-        this.comments = new ConcurrentHashMap<>();
-    }
+  public CommentRepositoryImpl() {
+    this.comments = new ConcurrentHashMap<>();
+  }
 
-    public void add(String userName, String comment) {
-        get(userName).add(comment);
-    }
+  public void add(String userName, String comment) {
+    get(userName).add(comment);
+  }
 
-    public List<String> get(String userName){
-        if (!comments.containsKey(userName)) {
-            comments.put(userName, new ArrayList<>());
-        }
-        return comments.get(userName);
+  public List<String> get(String userName) {
+    if (!comments.containsKey(userName)) {
+      comments.put(userName, new ArrayList<>());
     }
+    return comments.get(userName);
+  }
 }
