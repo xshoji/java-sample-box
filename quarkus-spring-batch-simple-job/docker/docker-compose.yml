@@ -1,0 +1,11 @@
+version: '2'
+services:
+  # graalvm container
+  graalvm-ce:
+    image: xshoji/graalvm-ce
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    tty: true
+    volumes:
+      - ../:/opt

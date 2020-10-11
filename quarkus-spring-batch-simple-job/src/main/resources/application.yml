@@ -3,9 +3,6 @@
 #
 # > Spring Boot – How to disable the Spring logo banner – Mkyong.com
 # > https://www.mkyong.com/spring-boot/spring-boot-how-to-disable-the-spring-logo-banner/
-spring:
-  main:
-    banner-mode: "off"
-    log-startup-info: false
-logging.level:
-  org.springframework: WARN
+#spring:
+#  main:
+#    banner-mode: "off"
