@@ -21,10 +21,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
+    <spring-boot-starter-parent.version>2.3.4.RELEASE</spring-boot-starter-parent.version>
   </properties>
-
   <modules>
-    <module>webapi</module>
+    <module>spring-boot-actuator-webapi</module>
   </modules>
 
   <dependencies>
@@ -63,5 +63,13 @@
     </dependency>
 
   </dependencies>
-
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${spring-boot-starter-parent.version}</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
